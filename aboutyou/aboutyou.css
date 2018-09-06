@@ -1,12 +1,12 @@
-header {
+h1 {
   background-color: maroon;
-  text-align: center;
   font-family: Boogaloo;
   color: antiquewhite;
-  text-shadow: 2px 2px black 1px;
-  text-algin: center;
-}
-li {
-  list-style-position: inside;
+  text-shadow: 1px 1px 1px black;
   text-align: center;
+}
+h3 {
+    background-color: maroon;
+    font-family: Boogaloo;
+    color: antiquewhite;
 }

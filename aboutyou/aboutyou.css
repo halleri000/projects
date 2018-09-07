@@ -1,12 +1,40 @@
-h1 {
+body {
   background-color: maroon;
+}
+h1 {
+  margin: 2px 2px 1px 0;
+  border:10px solid black;
+  background: linear-gradient(to right, #700007, #c20202);
   font-family: Boogaloo;
+  font-size: 2.5em;
   color: antiquewhite;
   text-shadow: 1px 1px 1px black;
   text-align: center;
 }
 h3 {
-    background-color: maroon;
-    font-family: Boogaloo;
-    color: antiquewhite;
+  background: linear-gradient(to left, #700007, #a10101);
+  border: 5px solid black;
+  text-align:center;
+  font-family: boogaloo;
+  font-size: 1.5em;
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
 }
+h5 {
+  border-top: 3px solid black;
+  text-align: center;
+  color:antiquewhite
+}
+footer {
+  text-align: center;
+  color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+}
+ul {
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
+  list-style-type: none;
+
+}
+
+

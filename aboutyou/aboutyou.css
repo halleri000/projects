@@ -2,6 +2,7 @@ body {
   background-image: cat_in_the_hat.jpg;
 }
 h1 {
+  padding: 10px 10px 10px 10px;
   margin: 2px 2px 1px 0;
   border:10px solid black;
   background: linear-gradient(to right, #700007, #c20202);

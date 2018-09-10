@@ -3,7 +3,6 @@ body {
   
 }
 h1 {
-  padding: 10px 10px 10px 10px;
   margin: 2px 2px 1px 0;
   border:10px solid black;
   background: linear-gradient(to right, #700007, #c20202);
@@ -30,7 +29,7 @@ h5 {
 footer {
   text-align: center;
   color: antiquewhite;
-font-family: 'Libre Barcode 128 Text', cursive;
+font-family: 'noto serif JP', sans-serif;
 }
 ul {
   color: antiquewhite;

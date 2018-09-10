@@ -1,5 +1,9 @@
 body {
   background-image: cat_in_the_hat.jpg;
+  background-repeat: none;
+  background-position: center center;
+  background-size: contain;
+  
 }
 h1 {
   padding: 10px 10px 10px 10px;
@@ -29,7 +33,7 @@ h5 {
 footer {
   text-align: center;
   color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
+font-family: 'Libre Barcode 128 Text', cursive;
 }
 ul {
   color: antiquewhite;

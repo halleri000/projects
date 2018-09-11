@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to top right, #700007, #c20202);
+  background: linear-gradient(to top right, #700007, #fa0202);
 }
 
 p {
@@ -10,16 +10,16 @@ p {
 }
 
 h1 {
-  margin: 2px 2px 1px 0;
   border:10px solid black;
   font-family: Boogaloo;
-  font-size: 2.5em;
+  font-size: 5em;
   color: antiquewhite;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 5px 5px 1px black;
   text-align: center;
 }
 
 h3 {
+  background-color: rgba(182, 2, 2, 0.5);
   border: 5px solid black;
   text-align:center;
   font-family: boogaloo;
@@ -38,7 +38,7 @@ ul {
 h5 {
   border-top: 3px solid black;
   text-align: center;
-  color:antiquewhite
+  color:rgb(250, 235, 215)
 }
 
 footer {

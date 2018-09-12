@@ -1,15 +1,19 @@
 body {
-  background: linear-gradient(to top right, #700007, #fa0202);
+  background: linear-gradient(to top right, #83010a, #df0101, #fa0303);
 }
 
 p {
   color: antiquewhite;
   font: 18px/20px neucha;
-  letter-spacing: 2pt;
-  word-spacing: 2pt;
+  letter-spacing: 4pt;
+  word-spacing: 4pt;
 }
 
 h1 {
+  background-image: url("The_cat_in_the_hat.jpg");
+  background-size: contain;
+  background-repeat: none;
+
   border:10px solid black;
   font-family: Boogaloo;
   font-size: 5em;
@@ -45,9 +49,9 @@ nav {
   border-top: 3px solid black;
 }
 
-a {
+a:hover {
   text-decoration: none;
-  color:white;
+  color: whitesmoke;
 }
 
 footer {

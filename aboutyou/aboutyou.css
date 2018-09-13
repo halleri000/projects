@@ -54,7 +54,7 @@ a:link {
   color: whitesmoke;
 }
 
-a:visited:
+a:visited {
   text-decoration: none;
   color: yellow;
 }

@@ -48,15 +48,25 @@ nav {
   border-top: 3px solid black;
 }
 
-a {
+a:link {
   font: 18px/20px Prata;
   text-decoration: none;
   color: whitesmoke;
 }
+
+a:visited:
+  text-decoration: none;
+  color: yellow;
+}
+
 a:hover {
   text-decoration: none;
   color: black;
 }
+
+a:active {
+  text-decoration;
+  color: royalblue;
 
 footer {
   text-align: center;

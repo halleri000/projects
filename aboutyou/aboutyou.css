@@ -52,9 +52,13 @@ nav {
   border-top: 3px solid black;
 }
 
-a:hover {
+a {
   text-decoration: none;
   color: whitesmoke;
+}
+a:hover {
+  text-decoration: none;
+  color: #C4E6FF;
 }
 
 footer {

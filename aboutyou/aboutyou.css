@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to top right, #7b241c, #d12803, #f81102);
+  background-image: linear-gradient(to top right, #700700, #a70000, #f70000); 
 }
 
 p {
@@ -10,16 +10,12 @@ p {
 }
 
 h1 {
-  background-image: url("The_cat_in_the_hat.jpg"); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   border:10px solid black;
+  text-align: center;
   font-family: Boogaloo;
   font-size: 5em;
   color: antiquewhite;
   text-shadow: 5px 5px 1px black;
-  text-align: center;
 }
 
 h3 {
@@ -32,11 +28,14 @@ h3 {
   text-shadow: 1px 1px 1px black;
 }
 
+img[alt] {
+  padding-right: 65px;
+ 
+}
 ul {
   color: antiquewhite;
   text-shadow: 1px 1px 1px black;
   list-style-type: none;
-
 }
 
 h5 {

@@ -9,6 +9,10 @@ p {
   word-spacing: 4pt;
 }
 
+[p^=This]{
+  font: 18px/20px Prata;
+}
+
 h1 {
   border:10px solid black;
   text-align: center;

@@ -38,10 +38,6 @@ h3 {
   text-shadow: 3px 3px 1px black;
 }
 
-img[alt] {
-  padding-right: 85px;
- 
-}
 ul {
   color: antiquewhite;
   text-shadow: 1px 1px 1px black;
@@ -50,7 +46,9 @@ ul {
   font-family: neucha;
 }
 
-
+[title^=a] {
+   padding-left: 45px;
+}
 
 nav {
   border: 5px solid black;

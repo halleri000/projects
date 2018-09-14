@@ -68,6 +68,8 @@ a {
 a:hover {
   text-decoration: none;
   color: royalblue;
+  font-family: Boogaloo;
+  font-size:2em;
 }
 
 footer {

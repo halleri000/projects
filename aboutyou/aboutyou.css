@@ -55,14 +55,12 @@ ul {
   font-family: neucha;
 }
 
-h5 {
-  border-top: 3px solid black;
-  text-align: center;
-  color:rgb(250, 235, 215);
-}
+
 
 nav {
-  border-top: 3px solid black;
+  border: 5px solid black;
+  text-align: center;
+  color:rgb(250, 235, 215);
 }
 
 a {

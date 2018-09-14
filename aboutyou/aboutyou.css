@@ -15,6 +15,10 @@ p {
     }
 
 h1 {
+  background-image: url("The_cat_in_the_hat");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border:10px solid black;
   text-align: center;
   font-family: Boogaloo;

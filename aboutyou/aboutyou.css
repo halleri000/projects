@@ -1,5 +1,5 @@
 body {
-padding:20px
+padding:20px;
 background-image: linear-gradient( #700700, #a70000, #f70000); 
 }
 
@@ -11,8 +11,8 @@ div{
 }
 
 p {
-	color: antiquewhite;
-	font:20px/20px prata;
+  color: antiquewhite;
+  font:20px/20px prata;
     }
 
 h1 {

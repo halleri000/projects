@@ -2,30 +2,44 @@ body {
   background-image: linear-gradient(to top right, #700700, #a70000, #f70000); 
 }
 
-p {
+div{
   color: antiquewhite;
   font: 18px/20px neucha;
-  letter-spacing: 4pt;
+  letter-spacing: 2pt;
   word-spacing: 4pt;
 }
+
+p {
+	color: antiquewhite;
+	font:20px/20px prata;
+    }
 
 h1 {
   border:10px solid black;
   text-align: center;
   font-family: Boogaloo;
-  font-size: 5em;
+  font-size: 7em;
   color: antiquewhite;
   text-shadow: 5px 5px 1px black;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
+    section {
+    background-color: rgba(182, 2, 2, 0.5);
+    border:5px solid black;
+    padding:20px;
+    margin:20px
+    }
 h3 {
-  background-color: rgba(182, 2, 2, 0.5);
-  border: 5px solid black;
   text-align:center;
   font-family: boogaloo;
-  font-size: 1.5em;
+  font-size: 3em;
   color: antiquewhite;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 3px 3px 1px black;
 }
 
 img[alt] {
@@ -36,6 +50,9 @@ ul {
   color: antiquewhite;
   text-shadow: 1px 1px 1px black;
   list-style-type: none;
+font-size: 1.5em;
+  font-family: neucha;
+  
 }
 
 h5 {
@@ -48,10 +65,11 @@ nav {
   border-top: 3px solid black;
 }
 
-a:link {
+a {
   font: 18px/20px Prata;
   text-decoration: none;
   color: whitesmoke;
+letter-spacing: 2pt;
 }
 
 a:hover {
@@ -64,5 +82,4 @@ footer {
   color: antiquewhite;
   font-family: 'Prata' serif;
 }
-
 

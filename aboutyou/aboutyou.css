@@ -56,12 +56,8 @@ a:link {
 
 a:hover {
   text-decoration: none;
-  color: black;
-}
-
-a:active {
-  text-decoration;
   color: royalblue;
+}
 
 footer {
   text-align: center;

@@ -1,15 +1,24 @@
+
 h1 {
     background-color:blue;
 }
 nav {
     background-color:pink;
+	float:left;
     display:"block";
     width:10%;
     height:500px;
 }
-h3 {
+section{
     background-color:yellow;
 }
-ol {
+section#first{
+	float:right;
+	width:90%;
+	height:500px;
+}
+div {
+position:fixed;
+bottom: 60px;
     background-color:crimson;
 }

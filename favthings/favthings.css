@@ -4,9 +4,12 @@ h1 {
     text-align:center;
     background-color:blue;
 }
+h3 {
+	font-size:25px;
+	text-align:center;
 nav {
     background-color:pink;
-	float:left;
+    float:left;
     display:"block";
 }
 ul {
@@ -38,7 +41,11 @@ section{
 }
 div {
 position:fixed;
-bottom:0;
+bottom:50px;
 width:99%;
     background-color:crimson;
 }
+footer {
+	position:fixed;
+	bottom:0;
+	}

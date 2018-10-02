@@ -11,9 +11,11 @@ h3 {
 }
 
 nav {
-    background-color:pink;
+    overflow:contain;
+    background-color:red;
     float:left;
     display:"block";
+    height:500px;
 }
 
 ul {
@@ -37,20 +39,18 @@ li a:hover {
 }
 
 section{
+    color: antiquewhite;
     background-color: blue;
     float:right;
-    width:85%;
+    width:75%;
     height:500px;
 }
-
 div {
-    position:fixed;
-    bottom:50px;
-    width:99%;
-    background-color:crimson;
+    background-color:red;
+    color:antiquewhite;
 }
 
 footer {
-    position:fixed;
+    position:relative;
     bottom:0;
 }

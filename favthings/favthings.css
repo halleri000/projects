@@ -12,30 +12,33 @@ h3 {
 
 nav {
     background-color:red;
-    float:left;
-    height:500px;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
-    background-color:red;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
 }
 
 li a {
+    border: 2px black solid;
     display: block;
-    color: #000;
-    padding: 8px 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 25px;
     text-decoration: none;
 }
 
+/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: blue;
-    color: white;
+    background-color: #111;
 }
-
 section{
     color: antiquewhite;
     background-color: blue;

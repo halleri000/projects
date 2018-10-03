@@ -11,10 +11,8 @@ h3 {
 }
 
 nav {
-    overflow:contain;
     background-color:red;
     float:left;
-    display:"block";
     height:500px;
 }
 

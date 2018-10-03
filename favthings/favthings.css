@@ -11,7 +11,7 @@ h3 {
 }
 
 nav {
-    background-color:red;
+    background-color:black;
 }
 
 ul {
@@ -19,15 +19,16 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black ;
 }
 
 li {
-    float: left;
+    float:left;
 }
 
 li a {
-    border: 2px black solid;
+    width: 282px; 
+    border: 2px white solid;
     display: block;
     color: white;
     text-align: center;
@@ -37,21 +38,40 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: white;
+    color:black;
 }
 section{
+    position:fixed;
+    top:100px;
+    left:250px;
     color: antiquewhite;
     background-color: blue;
-    float:right;
-    width:75%;
+    float:left;
+    width:60%;
     height:500px;
+    margin:10px;
 }
 div {
+    margin:10px;
+    position:fixed;
+    right:10px;
+    top:70px;
+    float:right;
     background-color:red;
     color:antiquewhite;
+    height:500px;
+    width:350px;
+}
+ul.potato{
+    display: block;
 }
 
 footer {
-    position:relative;
+    width:100%;
+    color:white;
+    background-color:black;
+    text-align:center;
+    position:fixed;
     bottom:0;
 }

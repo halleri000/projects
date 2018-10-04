@@ -1,13 +1,5 @@
-#page1{
+body{
 	background-image:url("shark2.0.jpeg");
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-size:cover;
-	background-attachment:fixed;
-	margin:20px;
-}
-#page2{
-    background-image:url("goofyshark.jpg");
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-size:cover;

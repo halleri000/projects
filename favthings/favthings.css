@@ -82,12 +82,9 @@ table{
 	width:100%;
 }
 
-#one{
-	background-image:url("sharkimage2");
-	background-repeat:no-repeat;
-	bacground-size:contain;
-}
-td{
+td img{
+	height:50%;
+	width:50%;
 	padding:10px;
 	margin:10px;
 	border:2px black solid;

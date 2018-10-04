@@ -31,8 +31,12 @@ color:black;
 li a:active{
 background-color:red;
 }
-
-
+header h1{
+	text-align:center
+}
+header h5{
+	text-align:center;
+}
 h3{
 text-align:center;
 }

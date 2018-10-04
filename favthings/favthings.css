@@ -83,11 +83,11 @@ th{
 	margin:10px;
 	border:2px black solid;
 ]
-footer h5{
+#disclaimer{
 	text-align: center;
 	font-size:20px;
 }
-footer p{
+#disclaimerp{
 	text-align: center;
 	font-size:15px;
 }

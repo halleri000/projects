@@ -1,4 +1,9 @@
 body{
+	background-image:url("shark.jpeg");
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	background-attachment:fixed;
 	margin:20px;
 }
 ul {

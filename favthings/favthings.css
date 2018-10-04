@@ -81,10 +81,11 @@ table{
 	height:200px;
 	width:100%;
 }
-
-td img{
+.gallery{
 	height:50%;
 	width:50%;
+}
+td{
 	padding:10px;
 	margin:10px;
 	border:2px black solid;

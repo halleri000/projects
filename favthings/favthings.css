@@ -86,14 +86,14 @@ div{
 	width:31%;
 	background-color:royalblue;
 }
-div#absolute{
+#absolute{
 	width:29%;
 	height:29%;
 	position:absolute;
 	top:900px;
 	right:30px;
 }
-div#links{
+#links{
 	border:2px black solid;
 	position:relative;
 	bottom:364px;
@@ -103,11 +103,11 @@ div#links{
 	width:31%;
 	background-color:royalblue;
 	}
-div#links ul {
+#links ul {
 	float:left;
 	list-style-type:none;
 }
-div#links a{
+#links a{
 	text-decoration:none;
 
 }
@@ -121,10 +121,14 @@ table{
 }
 
 #disclaimer{
+position:relative;
+top:405px;
 	text-align: center;
 	font-size:20px;
 }
-footer p{
+ p{
+position:relative;
+top:405px;
 	text-align: center;
 	font-size:15px;
 }

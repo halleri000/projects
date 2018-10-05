@@ -135,13 +135,13 @@ div{
 }
 
 table{
+	
+	border:10px black solid;
 	height:200px;
 	width:100%;
 }
 
 td{
-	
-	border:10px black solid;
 	height:100%;
 	width:33.33%;
 }
@@ -162,7 +162,7 @@ footer{
 #disclaimer{
 	font-size:20px;
 	position:relative;
-	left:200px
+	left:300px
 	top:805px;
 }
 

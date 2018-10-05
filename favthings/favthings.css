@@ -95,13 +95,13 @@ div{
 	bottom:464px;
 	float:right;
 	margin:2px;
-	height:560px;
+	height:500px;
 	width:31%;
 	background-color:royalblue;
 }
 
 #absolute{
-	width:31%;
+	width:29%;
 	height:29%;
 	position:absolute;
 	top:895px;
@@ -111,7 +111,7 @@ div{
 #links{
 	border:2px black solid;
 	position:relative;
-	bottom:64px;
+	top:240px;
 	right:-30px;
 	margin:2px;
 	height:260px;
@@ -163,6 +163,7 @@ footer{
 	font-size:20px;
 	position:relative;
 	left:200px
+	top:805px;
 }
 
 footer p{
@@ -170,4 +171,5 @@ footer p{
 	font-size:15px;
 	position:relative;
 	left:200px;
+	top:805px;
 }

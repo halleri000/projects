@@ -7,11 +7,13 @@ body{
 	background-attachment:fixed;
 	margin:20px;
 }
+
 ::selection{
 	background-color:white;
 	color:red;
 	font-size:16px;
 }
+
 .navbar1 {
 	list-style-type: none;
 	margin: 0; 
@@ -68,11 +70,13 @@ section{
 	background-color:royalblue;
 	color:antiquewhite;
 }
+
 section p{
 	font-family:prata;
 	font-size:18px;
 	word-spacing:4px;
 }
+
  #page2{
 	position:relative;
 	top:500px;
@@ -84,6 +88,7 @@ section p{
 	background-color:royalblue;
 	color:antiquewhite;
 }
+
 div{
 	border:2px black solid;
 	position:relative;
@@ -94,6 +99,7 @@ div{
 	width:31%;
 	background-color:royalblue;
 }
+
 #absolute{
 	width:31%;
 	height:29%;
@@ -101,6 +107,7 @@ div{
 	top:895px;
 	right:20px;
 }
+
 #links{
 	border:2px black solid;
 	position:relative;
@@ -110,31 +117,39 @@ div{
 	height:260px;
 	width:31%;
 	background-color:royalblue;
-	}
+}
+
 #links ul {
 	float:left;
 	list-style-type:none;
 }
+
 #links a{
 	color:antiquewhite;
 	text-decoration:none;
 }
+
 #links a:hover{
 	color:red;
 	size:30px;
 }
+
 table{
 	border:10px black solid;
 	height:200px;
 	width:100%;
 }
+
 td{
 	height:100%;
 	width:33.33%;
+}
+
 .gallery{
 	height:100%;
 	width:100%;
 }
+
 footer{
 	position:relative;
 	top:805px;
@@ -143,11 +158,13 @@ footer{
 	display:block;
 	width:100%;
 }
-	#disclaimer{
+
+#disclaimer{
 	font-size:20px;
 	position:relative;
 	left:200px
 }
+
 footer p{
 	text-align: center;
 	font-size:15px;

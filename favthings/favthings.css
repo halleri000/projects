@@ -6,6 +6,11 @@ body{
 	background-attachment:fixed;
 	margin:20px;
 }
+::selection{
+	background-color:white;
+	color:red;
+	font-size:16px;
+}
 .navbar1 {
 	list-style-type: none;
 	margin: 0; 

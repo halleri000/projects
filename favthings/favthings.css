@@ -60,7 +60,16 @@ section{
 	background-color:royalblue;
 	color:antiquewhite;
 }
-
+section #page2{
+		position:relative;
+	top:200px;
+	right:10px;
+	height:400px;
+	width:60%;
+	margin:2px;
+	padding:30px;
+	background-color:royalblue;
+	color:antiquewhite;
 div{
 	border:2px black solid;
 	position:relative;
@@ -78,14 +87,21 @@ div#absolute{
 	top:900px;
 	right:30px;
 }
+div#links{
+		border:2px black solid;
+	position:relative;
+	bottom:364px;
+	float:right;
+	margin:2px;
+	height:460px;
+	width:31%;
+	background-color:royalblue;
 div#links ul {
 	float:left;
 	list-style-type:none;
 }
 div#links a{
 	text-decoration:none;
-	width:200px;
-	height:100px;
 
 }
 table{

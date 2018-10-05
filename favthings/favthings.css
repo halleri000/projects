@@ -28,7 +28,7 @@ body{
 }
 
 .navbar a {
-	border:2px white solid;
+    border:2px white solid;
     display: block;
     color: white;
     text-align: center;
@@ -92,7 +92,7 @@ section p{
 div{
 	border:2px black solid;
 	position:relative;
-	top:50px;
+	bottom:367px;
 	float:right;
 	margin:2px;
 	height:500px;

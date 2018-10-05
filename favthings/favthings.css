@@ -61,10 +61,10 @@ section{
 	color:antiquewhite;
 }
 section #page2{
-		position:relative;
+	position:relative;
 	top:200px;
 	right:10px;
-	height:400px;
+	height:200px;
 	width:60%;
 	margin:2px;
 	padding:30px;
@@ -88,12 +88,12 @@ div#absolute{
 	right:30px;
 }
 div#links{
-		border:2px black solid;
+	border:2px black solid;
 	position:relative;
 	bottom:364px;
 	float:right;
 	margin:2px;
-	height:460px;
+	height:260px;
 	width:31%;
 	background-color:royalblue;
 div#links ul {

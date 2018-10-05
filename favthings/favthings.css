@@ -75,7 +75,7 @@ section p{
 }
  #page2{
 	position:relative;
-	top:300px;
+	top:500px;
 	right:10px;
 	height:200px;
 	width:60%;
@@ -87,7 +87,7 @@ section p{
 div{
 	border:2px black solid;
 	position:relative;
-	bottom:364px;
+	bottom:464px;
 	float:right;
 	margin:2px;
 	height:560px;
@@ -116,8 +116,12 @@ div{
 	list-style-type:none;
 }
 #links a{
+	color:antiquewhite;
 	text-decoration:none;
-
+}
+#links a:hover{
+	color:red;
+	size:30px;
 }
 table{
 	border:10px black solid;
@@ -133,7 +137,7 @@ td{
 }
 footer{
 	position:relative;
-	top:405px;
+	top:805px;
 	text-align:center;
 	background-color:blue;
 	display:block;

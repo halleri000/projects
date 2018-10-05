@@ -119,7 +119,10 @@ table{
 	height:50%;
 	width:50%;
 }
-
+footer{
+	displlay:block;
+	width:100%;
+}
 #disclaimer{
 position:relative;
 top:405px;

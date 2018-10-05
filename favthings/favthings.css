@@ -95,13 +95,13 @@ div{
 	bottom:367px;
 	float:right;
 	margin:2px;
-	height:500px;
+	height:600px;
 	width:31%;
 	background-color:royalblue;
 }
 
 #absolute{
-	width:29%;
+	width:31%;
 	height:29%;
 	position:absolute;
 	top:895px;

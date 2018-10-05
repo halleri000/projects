@@ -87,11 +87,9 @@ table{
 }
 .gallery{
 	height:50%;
-	width:100%;
+	width:50%;
 }
-td{
-	border:2px black solid;
-}
+
 #disclaimer{
 	text-align: center;
 	font-size:20px;

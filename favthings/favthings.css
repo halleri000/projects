@@ -17,7 +17,7 @@ body{
 	padding: 0;
 	overflow: hidden;
 	background-color: rgba(192,192,192,0.5);
-	position:sticky;
+	position: fixed;
 	top:0;
 }
 

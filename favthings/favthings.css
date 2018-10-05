@@ -96,8 +96,8 @@ div{
 #links{
 	border:2px black solid;
 	position:relative;
-	bottom:364px;
-	float:right;
+	bottom:64px;
+	right:-30px;
 	margin:2px;
 	height:260px;
 	width:31%;
@@ -120,18 +120,17 @@ table{
 	width:50%;
 }
 footer{
+	position:relative;
+	top:405px;
+	text-align:center;
+	background-color:blue;
 	display:block;
 	width:100%;
 }
-#disclaimer{
-position:relative;
-top:405px;
-	text-align: center;
+	#disclaimer{
 	font-size:20px;
 }
 footer p{
-position:relative;
-top:405px;
 	text-align: center;
 	font-size:15px;
 }

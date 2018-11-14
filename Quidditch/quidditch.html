@@ -13,10 +13,10 @@
     </head>
     <body>
         <!-- Create a navbar with the links displaying via the dropdown icon for small displays and horizontally for any other size display. The navbar should also contain the snith picture as the brand logo which links to the top of the page (i.e. refreshes the page). If you have questions, refer to the pictures navbar and navbar-small -->
-         <nav>
+         <nav id='title'>
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
                         <!-- Brand -->
-                <a class="navbar-brand" href='title'> <img src="https://jlaw21.github.io/Resources/snitch.png" alt="The Snitch" width=50px></a>
+                <a class="navbar-brand" href='#title'> <img src="https://jlaw21.github.io/Resources/snitch.png" alt="The Snitch" width=50px></a>
                       
                         <!-- Toggler/collapsibe Button -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navOptions">
@@ -39,39 +39,11 @@
             </div>
         </nav>         
         <nav >
-           <!-- <a >
-                <img src="https://jlaw21.github.io/Resources/snitch.png" alt="The Snitch" width=50px>
-            </a> -->
 
-           <!-- <button  type="button" >
-                    
-            </button> -->
-
-          <!--  <div  id="navOptions">
-                <ul >
-                    <li>
-                        <a  href="#rules">RULES</a>
-                    </li>
-                    <li >
-                        <a  href="#worldcup">WORLD CUP</a>
-                    </li>
-                    <li >
-                        <a  href="#teams">TEAMS</a>
-                    </li>
-                    <li >
-                        <a  href="#us-quidditch">US QUIDDITCH</a>
-                    </li>
-                </ul> 
-            </div>-->
         </nav>
 
         <!-- Create a carousel, but this time instead of images, three articles containing text or images are included as the carousel slides. You may format the text anyway you wish, but must use some type of Bootstrap Typography for 2+ items.-->
         <section class="carousel slide container-fluid" id="articles" data-ride="carousel" height="450px">
-                        <ul class="carousel-indicators">
-                            <li data-target="#articles" data-slide-to="0" class="active"></li>
-                            <li data-target="#articles" data-slide-to="1"></li>
-                            <li data-target="#articles" data-slide-to="2"></li>
-                        </ul>
                          <div class="carousel-inner">
                 <div class="carousel-item active">
                     <article>
@@ -92,22 +64,7 @@
                 </div>
             </div>
         </section>    
-        <section id="intro-carousel" class='container'>                                  
-            
-            <!-- The slideshow -->
-           <!-- <div >
-                <article>
-                    <h1>PLAY QUIDDITCH NOW</h1>
-                    <h3>Click the button to learn how!</h3>
-                    <a class='btn btn-info' role='button' href="https://www.usquidditch.org/teams">JOIN US</a>
-                </article>
-                <article >
-                    <img src="https://jlaw21.github.io/Resources/potter-quidditch.jpg" alt="Potter and the Snitch">
-                </article>
-                <article>
-                    <p><q>I sat in a hotel room after a row with my then boyfriend and invented it. Looking back, I can understand why I liked the idea of Bludgers</q> - JK ROWLINGS</p>
-                </article>
-            </div>   -->                 
+        <section id="intro-carousel" class='container'>                                               
             <!-- DO NOT TOUCH THESE. In class we included indicators at the bottom of the pictures to control the slides, this adds arrows on the left and right to control the slides.-->
             <a class="carousel-control-prev" href="#intro-carousel" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -118,11 +75,65 @@
         </section>
 
         <!-- Create a Dynamic Tab Container. When a tab header link is clicked, information about the tab will be displayed. Only one tab should be seen at a time. The overview tab is just text. The roles text should include a vertical collapsible list which will show the description of the role when an item is clicked on. The balls tab will do the same, only the list will be horizontal. The scoring tab will contain a jumbotron heading, and the rest is simplistic. Refer to the pictures rules-overview rules-roles rules-balls and rules-scoring for better clarification. -->
+<section id="rules" class="container">
+    <h1>THE RULES</h1>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#q-overview">OVERVIEW</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#q-roles">ROLES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#q-balls">BALLS 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#q-scoring">SCORING</a>
+    </li>
+  </ul>
 
-        <section id='rules' class='container'>
+  <!-- Tab panes -->
+  <div class="container-fluid">
+   <section>
+       <article id='q-overview' class='container tab-pane fade'>
+          <p>Quidditch is a fast, dangerous, exciting game in which two teams flying on brooms compete for points scored by throwing a ball – the Quaffle – through hoops on either end of a large grassy pitch.</p>
+          <p> There are three goal posts at either ends of a field. That field is called a Quidditch pitch. There are seven players on each side: the Keeper, the Seeker, three Chasers and two Beaters. One player is also appointed as the Captain. Professional teams will also have a manager.</p>
+       </article>
+    <article id="q-roles" class="container tab-pane fade">
+<ul >
+    <li ><button class='btn btn-primary'>Chasers</button></li>
+    <p id='desc-chasers'>The Chasers pass the Quaffle trying to throw it through one of the three hoops.</p>
+  <li ><button class='btn btn-primary' >Keeper</button></li>
+    <p id='desc-keeper'>The Keeper is responsible for keeping the Quaffle from going through the hoops, similar to a Goalie in soccer.</p>
+    <li ><button class='btn btn-primary ' >Beaters</button></li>
+     <p id='desc-beaters' >The Beaters are equipped with large clubs, used to smack the Bludgers around, attempting to disrupt the Chasers from getting a goal.</p>
+    <li ><button class='btn btn-primary ' >Seeker</button></li>
+  <p id='desc-seeker' >The Seeker tries to catch the Golden Snitch, and in doing so, ends the game.</p>
+        </ul>
+    </article>
+    <article id="q-balls" class="container tab-pane fade">
+                    <ul >
+                        <li ><button class='btn btn-primary '>Quaffle</button></li>
+                        
+                        <li><button class='btn btn-primary'  >Bludgers</button></li>
+                        
+                        <li ><button class='btn btn-primary ' >Golden Snitch</button></li>
+                        <p id='desc-quaffle' >A round red seamless leather ball, 12 inches in diameter – that is, about the size of a Muggle football. The Quaffle is the ball with which Chasers score goals, and due to the nature of the game must be caught and thrown one-handed, since the player must at the same time control his or her broomstick. </p>
+                        <p id='desc-bludger'>A Bludger is a round jet-black iron ball, 10 inches in diameter – that is, slightly smaller than a Quaffle. Two Bludgers are used and they attempt to unseat the player nearest to them. Beaters used clubs to hit the Bludgers towards opposing player to unseat them.</p>
+                        <p id='desc-snitch'>The Golden Snitch, commonly referred to as a Snitch, is the smallest and fastest ball in the game. </p>                        
+                    </ul>
+    </article>
+       <article id="q-scoring" class="container tab-pane fade">
+                               <p >Quaffle = 10 pts. Snitch = 150 pts.</p>
+                    <p>This scoring seems unfair, but typically Quidditch is played in a series of matches, and the team with the most accumulative points at the end of the series is the winner.</p>
+       </article>
+  </section>
+</div>
+       <!-- <section id='rules' class='container'>
             <h1>THE RULES</h1>
             <!--TAB NAV-->
-            <ul >
+          <!--  <ul >
                 <li >
                     <a href="#q-overview">OVERVIEW</a>
                 </li>
@@ -135,9 +146,9 @@
                 <li >
                     <a  href="#q-scoring">SCORING</a>
                 </li>
-            </ul>
+            </ul> -->
             <!-- TAB CONTENT-->
-            <div class='container-fluid'>
+           <!-- <div class='container-fluid'>
             <section>
                 <article id='q-overview'>
                     <p>Quidditch is a fast, dangerous, exciting game in which two teams flying on brooms compete for points scored by throwing a ball – the Quaffle – through hoops on either end of a large grassy pitch.</p>
@@ -174,7 +185,7 @@
             </section>    
             </div>
             
-        </section>
+        </section> -->
 
         <!-- Customize the table to your preference.-->
 

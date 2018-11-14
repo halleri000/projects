@@ -237,25 +237,24 @@
         </section>
 
         <!--Create a grouped drop down menu that contains a link to the Quidditch Teams. When one of those links is clicked the image, description and link for that team appears. No other team should show, only the team that was clicked. refer to teams-descriptions and teams-dropdown pics for more clarification. -->
-        
         <section id='teams' class='container'>
             <h1>Known Teams</h1>
             <h3>Click on a team to see details.</h3>
-            <div >
-                <button type="button" class="btn btn-primary " >
+            <div class='dropdown'>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle='dropdown' >
                 The Teams
                 </button>
-                <div >
+                <div class='dropdown-menu'>
                     <h5 >National Teams</h5>
-                        <a href="#" >Ireland</a>
-                        <a href="#" >Bulgaria</a>
-                        <a href="#" >Brazil</a>
-                        <a href="#" >USA</a>
+                        <a class='dropdown-item' href="#Ireland" >Ireland</a>
+                        <a class='dropdown-item' href="#Bulgaria" >Bulgaria</a>
+                        <a class='dropdown-item' href="#Brazil" >Brazil</a>
+                        <a class='dropdown-item' href="#USA" >USA</a>
                     <h5 >Hogwarts Teams</h5>
-                        <a href="#" >Gryffindor</a>
-                        <a href="#" >Hufflepuff</a>
-                        <a href="#" >Ravenclaw</a>
-                        <a href="#" >Slytherin</a>
+                        <a class='dropdown-item' href="#Gryffindor" >Gryffindor</a>
+                        <a class='dropdown-item' href="#Hufflepuff" >Hufflepuff</a>
+                        <a class='dropdown-item' href="#Ravenclaw" >Ravenclaw</a>
+                        <a class='dropdown-item' href="#Slytherin" >Slytherin</a>
                 </div>
             </div>
             <div id='desc-teams'>

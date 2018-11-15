@@ -51,7 +51,7 @@
                     <a class='btn btn-info' role='button' href="https://www.usquidditch.org/teams">JOIN US</a>
                 </article>
                 <article class="carousel-item ">
-                    <img src="https://jlaw21.github.io/Resources/potter-quidditch.jpg" height="450px" alt="Potter and the Snitch">
+                    <img src="https://jlaw21.github.io/Resources/potter-quidditch.jpg" height="200px" alt="Potter and the Snitch">
                 </article>
                 <article class="carousel-item">
                     <p><q>I sat in a hotel room after a row with my then boyfriend and invented it. Looking back, I can understand why I liked the idea of Bludgers</q> - JK ROWLINGS</p>
@@ -88,7 +88,45 @@
   </ul>
 
   <!-- Tab panes -->
-  <div class="container-fluid">
+     <div class='container-fluid'>
+            <section class='tab-content'>
+                <article class='tab-pane container active q-overview' id='q-overview'>
+                    <p>Quidditch is a fast, dangerous, exciting game in which two teams flying on brooms compete for points scored by throwing a ball – the Quaffle – through hoops on either end of a large grassy pitch.</p>
+                    <p> There are three goal posts at either ends of a field. That field is called a Quidditch pitch. There are seven players on each side: the Keeper, the Seeker, three Chasers and two Beaters. One player is also appointed as the Captain. Professional teams will also have a manager.</p>
+                </article>
+                <article class='tab-pane container fade q-roles' id='q-roles'>
+                    <ul class='nav flex-column'>
+                        <li class='nav-item'><button class='btn btn-primary nav-link' data-toggle="collapse" data-target="#desc-chasers">Chasers</button></li>
+                        <p id='desc-chasers' class='collapse' data-parent='#q-roles'>The Chasers pass the Quaffle trying to throw it through one of the three hoops.</p>
+                        <li class='nav-item'><button class='btn btn-primary nav-link'  data-toggle="collapse" data-target="#desc-keeper">Keeper</button></li>
+                        <p id='desc-keeper' class='collapse' data-parent='#q-roles'>The Keeper is responsible for keeping the Quaffle from going through the hoops, similar to a Goalie in soccer.</p>
+                        <li class='nav-item'><button class='btn btn-primary nav-link'  data-toggle="collapse" data-target="#desc-beaters">Beaters</button></li>
+                        <p id='desc-beaters' class='collapse' data-parent='#q-roles'>The Beaters are equipped with large clubs, used to smack the Bludgers around, attempting to disrupt the Chasers from getting a goal.</p>
+                        <li class='nav-item'><button class='btn btn-primary nav-link'  data-toggle="collapse" data-target="#desc-seeker">Seeker</button></li>
+                        <p id='desc-seeker' class='collapse' data-parent='#q-roles'>The Seeker tries to catch the Golden Snitch, and in doing so, ends the game.</p>
+                    </ul>
+                </article>
+                <article class='tab-pane container fade q-balls' id='q-balls'>
+                    <ul class='nav'>
+                        <li class='nav-item'><button class='btn btn-primary nav-link' data-toggle="collapse" data-target="#desc-quaffle">Quaffle</button></li>
+                        
+                        <li class='nav-item'><button class='btn btn-primary nav-link'  data-toggle="collapse" data-target="#desc-bludger">Bludgers</button></li>
+                        
+                        <li class='nav-item'><button class='btn btn-primary nav-link'  data-toggle="collapse" data-target="#desc-snitch">Golden Snitch</button></li>
+                        <p id='desc-quaffle' class='collapse' data-parent='#q-balls'>A round red seamless leather ball, 12 inches in diameter – that is, about the size of a Muggle football. The Quaffle is the ball with which Chasers score goals, and due to the nature of the game must be caught and thrown one-handed, since the player must at the same time control his or her broomstick. </p>
+                        <p id='desc-bludger' class='collapse' data-parent='#q-balls'>A Bludger is a round jet-black iron ball, 10 inches in diameter – that is, slightly smaller than a Quaffle. Two Bludgers are used and they attempt to unseat the player nearest to them. Beaters used clubs to hit the Bludgers towards opposing player to unseat them.</p>
+                        <p id='desc-snitch' class='collapse' data-parent='#q-balls'>The Golden Snitch, commonly referred to as a Snitch, is the smallest and fastest ball in the game. </p>                        
+                    </ul>
+                </article>
+                <article class='tab-pane container fade q-scoring' id='q-scoring'>
+                    <p class='jumbotron'><span class='float-left'>Quaffle = 10 pts.</span><span class='float-right'>Snitch = 150 pts.</span></p>
+                    <p>This scoring seems unfair, but typically Quidditch is played in a series of matches, and the team with the most accumulative points at the end of the series is the winner.</p>
+                </article>
+            </section>    
+            </div>
+            
+        </section>
+<!--  <div class="container-fluid">
    <section>
        <article id='q-overview' class='container tab-pane fade'>
           <p>Quidditch is a fast, dangerous, exciting game in which two teams flying on brooms compete for points scored by throwing a ball – the Quaffle – through hoops on either end of a large grassy pitch.</p>
@@ -121,7 +159,7 @@
      <p>This scoring seems unfair, but typically Quidditch is played in a series of matches, and the team with the most accumulative points at the end of the series is the winner.</p>
 </article>
 </section>
-</div>
+</div> -->
        <!-- <section id='rules' class='container'>
             <h1>THE RULES</h1>
             <!--TAB NAV-->

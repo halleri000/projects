@@ -1,0 +1,8 @@
+footer{ 
+  display: none;
+  background-color: darkblue;
+  }
+  div:hover h3 p{
+     display:block
+     }
+ 

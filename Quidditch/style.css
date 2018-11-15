@@ -3,7 +3,10 @@ body{
   color: antiquewhite;
 }
 
-
+.carousel{
+  width:300px;
+  height:200px;
+}
 
 
 

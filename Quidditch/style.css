@@ -1,9 +1,17 @@
+body{
+  background-color: rgb(70,35,107);
+  color: antiquewhite;
+}
+
+
+
+
+
+
+
+
 footer {
   background-color: ligtblue;
   opacity: .5
 }
 
-div #us-quidditch {
-  border:2px black solid;
-  background-color: lightred;
-}

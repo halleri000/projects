@@ -10,7 +10,7 @@ text-align: center;
   height:450px;
   font-size: 32px;
 } 
-#introcarousel
+#introcarousel{
 	opacity: 0.5;
 	background-color:black;
 	margin-top:90px;

@@ -16,22 +16,22 @@ text-align: center;
 	margin-top:90px;
 }
  #rules{
-   margin-top:100px;
+   margin-top:200px;
 }
 
 #worldcup{
-	margin-top:100px;
+	margin-top:200px;
 }
 
 .extrainfo{
 	margin-top: 100px;
-	background-color: blue;
+	background-color: rgb(53,49,144);
 	border:2px solid black;
     }
 
 
 footer {
-  background-color: ligtblue;
-  opacity: 0.5;
+  background-color: black;
+  opacity: 0.3;
 }
 

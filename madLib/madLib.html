@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="madLib.css">
     <script src="madLib.js"></script>
-
-
+    <link rel="stylesheet" href="madLib.css">
 </head>
 
 <body>
- 
-        <form>
-            <fieldset> 
-                <label for='userName'> Please enter your name </label>
-                <input type="text" id="userName"/>
-                <button type="submit" id="button"> SUBMIT </button>
-            </fieldset>
-        </form>
-
-        <div id="output"></div>
-
+    <form>
+        <fieldset>
+            <label for='favColor'> color </label>
+            <input type="text" id="favColor" />
+        </fieldset>
+        <fieldset>
+            <label for='adjective'> adjective</label>
+            <input type="text" id='Adjective'>
+        </fieldset>
+        <fieldset>
+            <label for='noun'> noun</label>
+            <input type="text" id='noun'>
+        </fieldset>
+        <fieldset>
+            <label for='verb'> verb </label>
+            <input type="text" id='verb'>
+    </fieldset>
+    <fieldset>
+            <label for='adverb'> adverb </label>
+            <input type='text' id='adverb'>
+    </fieldset>
+    <fieldset>
+            <label for='name'> name </label>
+            <input type="text" id='name'>
+    </fieldset>
+    <fieldset>
+            <label for='place'> place </label>
+            <input type="text" id='place'>
+    </fieldset>
+    <fieldset>
+            <label for='adjective2'> adjective </label>
+            <input type="text" id='adjective2'>
+        </fieldset>
+        <fieldset>
+            <label for='place'> place </label>
+            <input type="text" id='place'>
+        </fieldset>
+        <fieldset>
+            <label for='place'> place </label>
+            <input type="text" id='place'>
+        </fieldset>
+            <button type="button" onclick="showInfo()"> SUBMIT </button>
+    </form>
+    <div id='output'> There is nothing here </div>
 </body>
 
 </html>

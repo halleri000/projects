@@ -1,25 +1,16 @@
-
 $(document).ready(function(){
-
-    $("#button").click(function(){
-
+    $("#button")>click(function(){
         showInfo();
-
     })
-
 });
-var userName;
 
 
-function getInfo(){
-    userName = $("#userName").val();
+function getInfoColor(){
+    favColor = $('#favColor').val();
 }
-
 function showInfo(){
-    getInfo();
-    var message = "Hello" +  userName + ", glad to meet you!";
+getInfo();
+var message = "your favorite color is" +  favColor;
 
-    $('#ouput').text(messsage);
-    $("#output").text(message).show().animate({'top':'0px',"opacity":'1'},'slow');
+$('#output').text(messsage).show();
 }
-

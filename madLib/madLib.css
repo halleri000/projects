@@ -1,4 +1,12 @@
 #output{
     display:none;
 }
+#back{
+    display:none;
+background-color:red;
+}
 
+#output{
+    text-align:center;
+    font-size:24px;
+}

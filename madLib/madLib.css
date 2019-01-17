@@ -30,8 +30,14 @@ background-color:red;
   width:50%;
   clear:both;
 }
+.container label{
+display:block;
+    width:100%;
+    clear:both;
+}
 .container input{
-  width:100%;
+    margin:auto;
+  width:25%;
   clear:both;
 }
 #submit{

@@ -21,10 +21,11 @@ background-color:red;
     font-family: 'Oswald', sans-serif;
     text-align:center;
     font-size:15px;
-    background-color:lightblue;
+    background-color:#0e3ad6;
     border:2px black solid;
 }
 .container{
+    background-color:#0e3ad6;
   margin:auto;
   width:50%;
   clear:both;
@@ -34,7 +35,6 @@ background-color:red;
   clear:both;
 }
 #submit{
-  position:relative;
-  left:280px;
-  margin:auto;
+  
+    text-align:center
 }

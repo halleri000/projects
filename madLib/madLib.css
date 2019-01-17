@@ -1,12 +1,28 @@
-#output{
-    display:none;
-}
+
 #back{
     display:none;
 background-color:red;
 }
 
 #output{
+  opacity:0.01;
+  display:none;
     text-align:center;
     font-size:24px;
+    background-color:lightblue;
+    border:2px black solid;
+}
+.container{
+  margin:auto;
+  width:50%;
+  clear:both;
+}
+.container input{
+  width:100%;
+  clear:both;
+}
+#submit{
+  position:relative;
+  left:280px;
+  margin:auto;
 }

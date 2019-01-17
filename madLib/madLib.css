@@ -20,9 +20,10 @@ background-color:red;
   display:none;
     font-family: 'Oswald', sans-serif;
     text-align:center;
-    font-size:15px;
+    font-size:2em;
     background-color:#0e3ad6;
     border:2px black solid;
+    height:200px;
 }
 .container{
     background-color:#0e3ad6;

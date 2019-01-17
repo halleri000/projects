@@ -42,8 +42,11 @@ display:block;
   clear:both;
 }
 #submit{
-  
+  margin:auto;
     text-align:center;
+}
+.buttonbox{
+    width:100%;
 }
 footer{
     background-color:rgba(11,46,141,0.5);
@@ -54,3 +57,4 @@ footer{
     height:150px;
     text-align:center;
 }
+

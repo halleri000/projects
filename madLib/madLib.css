@@ -27,7 +27,7 @@ background-color:red;
 .container{
     background-color:#0e3ad6;
   margin:auto;
-  width:50%;
+  width:35%;
   clear:both;
 }
 .container label{
@@ -37,7 +37,7 @@ display:block;
 }
 .container input{
     margin:auto;
-  width:25%;
+  width:40%;
   clear:both;
 }
 #submit{

@@ -7,8 +7,9 @@ background-color:red;
 #output{
   opacity:0.01;
   display:none;
+    font-family: 'Oswald', sans-serif;
     text-align:center;
-    font-size:24px;
+    font-size:15px;
     background-color:lightblue;
     border:2px black solid;
 }

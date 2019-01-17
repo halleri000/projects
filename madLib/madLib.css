@@ -3,6 +3,7 @@ background-color:#13066d;
 color:white;
 
 }
+
 header{
     background-color:rgba(11,46,141,0.5);
     font-family: 'Poppins', sans-serif;
@@ -10,8 +11,11 @@ header{
     height:100px;
     text-align:center;
 }
+
 #back{
   display:none;
+  margin:auto;
+  text-align:center;
 }
 
 #output{
@@ -20,37 +24,43 @@ header{
     font-family: 'Oswald', sans-serif;
     text-align:center;
     font-size:2em;
-    background-color:#0e3ad6;
-    border:2px black solid;
     height:300px;
 }
+
 .container{
-    background-color:#0e3ad6;
+  text-align:center;
+  background-color:#0e3ad6;
   margin:auto;
   width:35%;
   clear:both;
 }
+
 .container label{
 display:block;
     width:100%;
     clear:both;
 }
+
 .container input{
     margin:auto;
   width:40%;
   clear:both;
 }
+
 #submit{
   margin:auto;
     text-align:center;
 }
+
 .buttonbox{
     width:100%;
+    text-align:center;
 }
+
 footer{
     background-color:rgba(11,46,141,0.5);
     position: relative;
-    top:300px;
+    top:100px;
     font-family: 'Poppins', sans-serif;
     font-size:20px;
     height:150px;

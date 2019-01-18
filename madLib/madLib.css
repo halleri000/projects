@@ -1,11 +1,10 @@
 body{
-background-color:#13066d;
-color:white;
-
+    background-color:#13066d;
+    color:white;
 }
 
 header{
-    background-color:rgba(11,46,141,0.5);
+    background-color:rgba(11,46,141,0.3);
     font-family: 'Coiny', cursive;
     text-shadow:3px 3px black;
     font-size:42px;
@@ -13,62 +12,64 @@ header{
     text-align:center;
 }
 
-#back{
-    position:relative;
-    top:400px;
-  display:none;
-  margin:auto;
-  text-align:center;
-}
-
-#output{
-  opacity:0.01;
-  display:none;
-    font-family: 'Oswald', sans-serif;
-    text-align:center;
-    font-size:2em;
-    height:50%;
-}
-
 .container{
-  text-align:center;
-  background-color:#0e3ad6;
-  margin:auto;
-  width:35%;
-  clear:both;
+    text-align:center;
+    background-color:#002bc7;
+    margin:auto;
+    width:35%;
+    clear:both;
 }
-
+  
 .container label{
-display:block;
+    display:block;
     width:100%;
     clear:both;
 }
 
 .container input{
     margin:auto;
-  width:40%;
-  clear:both;
+    width:40%;
+    clear:both;
 }
 
-#submit{
-  margin:auto;
+#output{
+    line-height:2em;
+    opacity:0.01;
+    display:none;
+    font-family: 'Oswald', sans-serif;
     text-align:center;
-}
+    font-size:2em;
+    height:25%;
+  }
 
 .buttonbox{
     width:100%;
     text-align:center;
 }
-h2{
-font-family: 'Coiny', cursive;
-fornt-size:32px;
+#submit{
+    margin:auto;
+    text-align:center;
+  }
+
+#back{
+    position:relative;
+    top:350px;
+    display:none;
+    margin:auto;
+    text-align:center;
 }
+
+h2{
+    font-family: 'Coiny', cursive;
+    font-size:32px;
+}
+
 footer{
     background-color:rgba(11,46,141,0.5);
     position: relative;
-    top:200px;
+    top:250px;
     font-size:20px;
-    height:150px;
+    height:200px;
     text-align:center;
 }
 

@@ -12,6 +12,10 @@ $(document).ready(function () {
         $("#output").hide()
         $('#back').hide()
    });
+    
+  $("#back").click (function() {
+        $("input[type=text], textarea").val("");
+});
 })
 
 function getInfo() {

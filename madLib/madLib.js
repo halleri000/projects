@@ -11,11 +11,8 @@ $(document).ready(function () {
         $('#submit').show()
         $("#output").hide()
         $('#back').hide()
+       $('input').val("");
    });
-    
-  $("#back").click (function() {
-        $("input[type=text], textarea").val("");
-});
 })
 
 function getInfo() {

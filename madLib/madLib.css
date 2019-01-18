@@ -59,12 +59,14 @@ display:block;
     width:100%;
     text-align:center;
 }
-
+h3{
+font-family: 'Coiny', cursive;
+fornt-size:32px;
+}
 footer{
     background-color:rgba(11,46,141,0.5);
     position: relative;
     top:200px;
-    font-family: 'Coiny', cursive;
     font-size:20px;
     height:150px;
     text-align:center;

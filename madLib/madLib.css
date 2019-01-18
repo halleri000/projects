@@ -13,6 +13,8 @@ header{
 }
 
 #back{
+    position:relative;
+    top:400px;
   display:none;
   margin:auto;
   text-align:center;

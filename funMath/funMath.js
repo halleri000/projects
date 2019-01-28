@@ -8,6 +8,10 @@ $("#document").ready(function(){
     	$("#output2").toggle();
     moneh();
   });
+    $("#convert2").click(function(){
+      $("#output3").toggle;
+      weight();
+    })
 })
 var add = function(){
     var year;
@@ -35,4 +39,20 @@ var total = x  + gratuityamount;
 var message="gratuity: $" + gratuityamount + " Total: $" + total;
 
 $("#output2").text(message);
+}
+
+var weight = function(){
+
+  var x = $("#pounds").val();
+  var y = $("#inches").val();
+
+  var kg = x * 0.454;
+  var m = y * 0.0254;
+  var pow = Math.pow(m,2);
+
+  var BMI = kg/pow;
+
+  var message = "BMI is: " + BMI;
+
+  $("#output3").text(message);
 }

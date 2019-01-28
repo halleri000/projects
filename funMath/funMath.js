@@ -1,6 +1,6 @@
 $("#document").ready(function(){
 
-	$("#go").click(function(){
+	$("#convert").click(function(){
   	$("#output").toggle();
     add();
   })
@@ -9,7 +9,7 @@ var add = function(){
     var year;
 	  var day;
 
-    var x = $("#number1").val();
+    var x = $("#minutes").val();
  year =  Math.floor( x /525600);
  var remainingMinutes=x%525600;
  day = Math.floor(remainingMinutes / 1440);

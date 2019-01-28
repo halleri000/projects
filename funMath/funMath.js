@@ -3,7 +3,11 @@ $("#document").ready(function(){
 	$("#convert").click(function(){
   	$("#output").toggle();
     add();
-  })
+  });
+    $("#compute").click(function(){
+    	$("#output2").toggle();
+    moneh();
+  });
 })
 var add = function(){
     var year;
@@ -19,4 +23,16 @@ var add = function(){
     $('#output').text(message);
 
 
+}
+var moneh = function(){
+
+var x = $('#subtotal').val();
+var y = $('#gratuity').val();
+x = parseInt(x);
+y = parseInt(y);
+var gratuityamount = x * (y / 100.0); 
+var total = x  + gratuityamount;
+var message="gratuity: $" + gratuityamount + " Total: $" + total;
+
+$("#output2").text(message);
 }

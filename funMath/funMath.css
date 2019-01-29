@@ -28,5 +28,5 @@ input{
     display:none;
     text-align: center;
     position:relative;
-    
+    border:2px solid black;
 }

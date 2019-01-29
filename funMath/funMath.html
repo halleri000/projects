@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -11,68 +9,66 @@
 </head>
 
 <body>
-<h1> Problem One </h1>
-<form>
+    
+    <h1> Problem One </h1>
+    <form>
+        <fieldset>
+
+            <label for='minutes'> Minutes: </label>
+            <input type='text' id='minutes' />
+
+        </fieldset>
+        <fieldset>
+            <button type='button' id='convert'> Convert </button>
+        </fieldset>
+    </form>
+    <div id='output1' class='show'>  </div>
+
+
+    <form>
+        <h1> Problem Two </h1>
+
+        <fieldset>
+            <label for='subtotal'> Subtotal: </label>
+            <input type='text' id='subtotal' />
+
+            <label for='gratuity'> Gratuity: </label>
+            <input type='text' id='gratuity' />
+        </fieldset>
+        <fieldset>
+            <button type='button' id='compute'> Submit </button>
+        </fieldset>
+    </form>
+    <div id='output2' class='show'></div>
+
+
+    <form>
+        <h1> Problem Three </h1>
+        <fieldset>
+            <label for='pounds'> Pounds: </label>
+            <input type='text' id='pounds' />
+
+            <label for='inches'> Inches: </label>
+            <input type='text' id='inches' />
+        </fieldset>
+        <fieldset>
+            <button type='button' id='convert2'> Submit </button>
+        </fieldset>
+    </form>
+    <div id='output3' class='show'></div>
+
+
+    <form>
+        <h1> Problem Four </h1>
+    </form>
     <fieldset>
-
-        <label for='minutes'> minutes</label>
-        <input type='text' id='minutes'/>
-
-    </fieldset>
-    <fieldset>
-        <button type='button' id='convert'>CONVERT</button>
-    </fieldset>
-</form>
-<div id='output' class='show'></div>
-
-
-
-<form>
-    <h1> Problem Two </h1>
-
-    <fieldset>
-        <label for='subtotal'> Subtotal </label>
-        <input type='text' id='subtotal'/>
-
-        <label for='gratuity'> Gratuity </label>
-        <input type='text' id='gratuity' />
-    </fieldset>
-    <fieldset>
-        <button type='button' id='compute'> Stuff </button>
-    </fieldset>
-</form>
-<div id='output2' class='show'></div>
-
-
-<form>
-    <h1> Problem Three </h1>
-    <fieldset>
-        <label for='pounds'> pounds </label>
-        <input type='text' id='pounds' />
-
-        <label for='inches'> inches </label>
-        <input type='text' id='inches' />
-    </fieldset>
-    <fieldset>
-    <button type='button' id='convert2'> STUFF </button>
-    </fieldset>
-</form>
-<div id='output3' class='show'></div>
-
-
-<form> 
-    <h1> Problem Four </h1>
-</form>
-    <fieldset>
-        <label for='decimal'> Decimal Time </label>
+        <label for='decimal'> Decimal Time: </label>
         <input type='text' id='decimal' />
     </fieldset>
     <fieldset>
-        <button type='button' id='convert3'> Hours </button>
+        <button type='button' id='convert3'> Submit </button>
     </fieldset>
-<div id='output4' class='show'></div>
-
-
-
+    <div id='output4' class='show'></div>
 </body>
+
 </html>

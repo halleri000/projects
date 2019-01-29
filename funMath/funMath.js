@@ -15,7 +15,7 @@ $("#document").ready(function() {
   $("#convert3").click(function() {
     $("#output4").toggle();
     time();
-  })
+  });
 })
 var add = function() {
   var year;
@@ -55,7 +55,7 @@ var weight = function() {
   var pow = Math.pow(m, 2);
 
   var BMI = kg / pow;
-
+  BMI = BMI.toFixed(2);
   var message = "BMI is: " + BMI;
 
   $("#output3").text(message);

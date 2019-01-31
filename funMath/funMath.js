@@ -33,7 +33,7 @@ var problem2 = function () {
   y = parseInt(y);
   var gratuityamount = (y / 10.0);
   var total = x + gratuityamount;
-  $("#output2").toggle().text(" Gratuity: $" + gratuityamount + " Total: $" + total);
+  $("#output2").toggle().text(" Gratuity: $" +  gratuityamount + " Total: $" + total);
 }
 
 var problem3 = function () {

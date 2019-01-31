@@ -6,7 +6,7 @@ body{
 
 h1{
     font-size:40px;
-    text-shadow: 2px 2px black;
+    text-shadow: 4px 1px black;
     font-family: 'Anton', sans-serif;
     text-align:center;
 }
@@ -20,7 +20,7 @@ fieldset{
 }
 
 label{
-    text-shadow: 2px 2px black;
+    text-shadow: 3px 1px black;
     font-family: 'Acme', sans-serif;
     width: 15em;
     float:left;
@@ -41,4 +41,12 @@ input{
     text-align: center;
     position:relative;
 
+}
+
+footer{ 
+    text-shadow:2px 2px black;
+    background-color:#0283e5;
+    text-align:center;
+    font-size:24px;
+    font-family: 'Acme', sans-serif; 
 }

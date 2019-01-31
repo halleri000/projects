@@ -3,7 +3,7 @@ body{
 }
 
 h1{
-    background-color:yellow;
+    font-family: 'Anton', sans-serif;
     text-align:center;
 }
 
@@ -14,6 +14,7 @@ fieldset{
 }
 
 label{
+    font-family: 'Acme', sans-serif;
     width: 15em;
     float:left;
     clear:left;
@@ -26,6 +27,7 @@ input{
 }
 
 .show{
+    font-family: 'Acme', sans-serif;
     display:none;
     text-align: center;
     position:relative;

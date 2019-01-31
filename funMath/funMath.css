@@ -35,7 +35,7 @@ input{
 
 .show{
     font-size:24px;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 1px black;
     font-family: 'Acme', sans-serif;
     display:none;
     text-align: center;

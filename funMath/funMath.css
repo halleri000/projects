@@ -1,10 +1,8 @@
 body{
-    background-color:red;
     font-size:24px;
 }
 
 h1{
-    text-shadow:4px 4px gold;
     background-color:yellow;
     text-align:center;
 }
@@ -16,7 +14,6 @@ fieldset{
 }
 
 label{
-    background-color:green;
     width: 15em;
     float:left;
     clear:left;
@@ -25,15 +22,12 @@ label{
 }
 
 input{
-    background-color:purple;
     float:left;
 }
 
 .show{
-    background-color:blue;
     display:none;
     text-align: center;
     position:relative;
-    border:10px solid p
-        ink;
+    border:10px solid black
 }

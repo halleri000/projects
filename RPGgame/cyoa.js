@@ -25,6 +25,7 @@ $(document).ready(function() {
       $('#button3').hide();
       updateButtons(O9, O10);
     } else if ($('#button1').text() === O9) {
+    $('#nuke').show();
       updateNarrative(N8);
       hideButton();
       restart();
@@ -81,6 +82,7 @@ $(document).ready(function() {
       $("#button3").show();
       updateButtons(O6, O7, O8);
     } else if ($('#button2').text() === O7) {
+    $('#potion').show();
       updateNarrative(W2);
        $("#cow").hide();
       $('#button2').hide();
@@ -96,6 +98,7 @@ $(document).ready(function() {
     $("#button1").click(function() {
       if ($('#button1').text() === O6) {
         updateNarrative(N6);
+        $("#potion").hide();
          $("#cow").hide();
         $("#button2").show();
         $('#button3').hide();
@@ -115,6 +118,7 @@ $(document).ready(function() {
     })
     $('#button3').click(function() {
       if ($('#button3').text() === O8) {
+      $("#potion").hide();
        $("#cow").hide();
         updateNarrative(N7);
         updateButtons(O15, O16, O17);
@@ -180,6 +184,7 @@ var restart = function() {
   $('#button4').show();
   $('#button4').click(function() {
     updateNarrative(N1);
+    $('#nuke').hide();
     $('#button4').hide();
     $('#button3').hide();
     $('#button1').show();
@@ -210,3 +215,4 @@ var createButton = function(id, text) {
   return " <button type=button id=" + id + ">" + text + "</button>";
 
 }
+

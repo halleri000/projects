@@ -25,7 +25,7 @@ $(document).ready(function () {
       $('#button3').hide();
       updateButtons(O9, O10);
     } else if ($('#button1').text() === O3) {
-      $('#kukluck').hide();
+      $('#kukluck').show();
       updateNarrative("Did not get weapon");
       hideButton();
       restart();
@@ -53,7 +53,6 @@ $(document).ready(function () {
     $('#button3').click(function () {
       if ($('#button3').text() === O5) {
         updateNarrative(N5);
-
         $("#w1").hide();
         $('#kukluck').hide();
         $('#button2').show();
@@ -106,6 +105,7 @@ $(document).ready(function () {
       hideButton();
       restart();
     }
+    
     $("#button1").click(function () {
       if ($('#button1').text() === O6) {
         updateNarrative(N6);
@@ -115,6 +115,7 @@ $(document).ready(function () {
         $('#button3').hide();
         updateButtons(O13, O14);
       }
+
       $("#button1").click(function () {
         if ($('#button1').text() === O13) {
           updateNarrative(N12);
@@ -127,6 +128,7 @@ $(document).ready(function () {
         }
       })
     })
+
     $('#button3').click(function () {
       if ($('#button3').text() === O8) {
         $("#potion").hide();
@@ -140,51 +142,38 @@ $(document).ready(function () {
       }
     })
   })
-
-
 });
 
 var N1 = " There once was an ancient race of warriors named the... "
 var N2 = " The leader was a well known warrior that has killed the biggest of monsters and won every battle he was been in. Before the last battle that would determine that fate of the kingdom he went to... "
-
 var N3 = " The most well known soldier in the moo moo pals was named. Auhsoj Ecitsuj. He was having a good time at the fair with his family when suddenly a group of tri gender pyro foxes killed his family before he could react. He killed them all knowing who sent them because of the insignia they had. He went to...  "
-
 var N4 = " The battle lasted for days with thousands casualities and no sign of slowing down anytime soon. He decided to... "
 var N5 = " You broke into the enemy's castle. There was high levels of security every where. You went in... "
-
 var N6 = " you found the main headquarters of the man that hired the assassins. This headquarters was like a fortress with guards everywhere. You..."
 var N7 = " One you way out of the kingdom some ofthe assassins saw you and cut you off. You were taken to a dungeon and were tortured for what seemed like months. One night you were able to snag the keys to the cell from a guard. You... "
-
 var N8 = " The rocket caused a nuclear war far destroying almost all life on earth "
 var N9 = " The battle lasted only two more days before the enemy decided to surrender "
 var N10 = " You got into the kings chamber and was able to kill him without anyone notices what happened. The kingdom fell in less than a week and you controlled all of the land. "
 var N11 = " You got into a huge gun fight and the king got away. You died after taking a large majority of the guards out but the actual battle continued for weeks more until the Kuklukonians lost. "
-
 var N12 = " The guards caught onto who you where and alerted the man you were after. He left and the headquarters went on lock down and was destroyed by a self destruct sequence. Every one there as instantly vaporized "
 var N13 = " You were able to eliminate everyone there before anyone noticing using your superspeed. You got your revenge."
 var N14 = " Some other prisoners saw you attempting to escape and decided to steal the keys to allow them to escape. You were then killed by the guards."
 var N15 = " You help 15 other prisoners escape but you fell into a pit just after getting away from the prison. None of the others tried to help you causing you to die by starvation. "
 var N16 = " You escaped and got away to the next kingdom. You are now wanted dead or alive with a $5million bounty. You then started a new life and never looked back."
-
 var W1 = " He got his trusty unicorn launcher "
 var W2 = " He got an old super speed potion "
 var O1 = " Kuklukonians "
-
 var O2 = " Moo Moo pals "
-
 var O3 = " fight "
 var O4 = " The armory "
 var O5 = " To kill the enemy's leader"
-
 var O6 = " hunt down the people "
 var O7 = " his house "
 var O8 = " leave the kingdom "
-
 var O9 = " nuke the enemy's kingdom "
 var O10 = " stay and fight  "
 var O11 = " stealthily "
 var O12 = " guns blazing "
-
 var O13 = " manipulated the guards "
 var O14 = " killed everyone"
 var O15 = " tried to escape during a riot"
@@ -202,18 +191,17 @@ var restart = function () {
     $('#button2').show();
     updateButtons(O1, O2);
     launcher = false;
-
   })
 }
+
 var hideButton = function (a, b, c) {
   $("#button1").hide();
   $("#button2").hide();
   $("#button3").hide();
 }
+
 var updateNarrative = function (a) {
-
   $('article').text(a)
-
 }
 
 var updateButtons = function (a, b, c) {
@@ -223,8 +211,6 @@ var updateButtons = function (a, b, c) {
 }
 
 var createButton = function (id, text) {
-
   return " <button type=button id=" + id + ">" + text + "</button>";
-
 }
 

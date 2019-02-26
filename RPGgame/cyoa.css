@@ -25,9 +25,16 @@ h1 {
   display: none;
 }
 
+#nuke {
+    position: relative;
+  top: 48px;
+  float: right;
+}
+
 button {
   height: 45px;
   width: 30.3%;
   margin: auto;
   padding: 10px;
 }
+

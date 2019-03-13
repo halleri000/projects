@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#board {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 25px auto 0;
+}
+
+
+.tallBorder {
+  border-right: 4px solid black;
+}
+
+.fatBorder {
+  border-bottom: 4px solid black;
+}
+
+td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+td:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+#output {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 10px;
+  margin: 30px;
+  text-align: center;
+}
+
+#buttonBar {
+  text-align: center;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}

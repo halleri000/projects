@@ -4,7 +4,8 @@
 }
 
 input {
-  font-size: 20px;
+  text-align:center;
+  font-size: 30px;
   width: 100%;
   height: 90%;
   outline: none;
@@ -34,7 +35,12 @@ td {
   text-align: center;
 }
 
-td:hover {
+input:hover{
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+ td:hover {
   background-color: #e4e4e4;
   cursor: pointer;
 }

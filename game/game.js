@@ -218,9 +218,7 @@ var checkColumn = function () {
 
 }
 
-var checkSquare = function () {
 
-}
 
 var checkAll = function () {
     checkRow();
@@ -243,9 +241,7 @@ var reset = function () {
     $("#output").text("");
 }
 
-var checkSquare = function () {
 
-}
 
 
 

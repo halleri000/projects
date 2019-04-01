@@ -218,45 +218,10 @@ var checkColumn = function () {
 
 }
 
-var checkSquare = function () {
-
-}
-
 var checkAll = function () {
     checkRow();
     checkColumn();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-var reset = function () {
-    $("input").val("");
-    $("#output").text("");
-}
-
-var checkSquare = function () {
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 var reset = function () {
     $("input").val("");

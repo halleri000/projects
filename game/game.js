@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     })
 
-
+c
 });
 
 var zero = $("#r0c1").text();
@@ -222,6 +222,7 @@ var checkAll = function () {
     checkRow();
     checkColumn();
 }
+
 
 var reset = function () {
     $("input").val("");

@@ -2,18 +2,12 @@ $(document).ready(function() {
 
   $("#submit").click(function() {
   check();
-
-
   })
+	
   $("#reset").click(function() {
     reset();
-
   })
-
-
 });
-
-
 
 var check = function() {
 var a = parseInt($("#input0").val());
@@ -36,7 +30,7 @@ var q = parseInt($("#input16").val());
 var r = parseInt($("#input17").val());
 	
   if((a == 6 ) && (b === 9) && (c === 3) && (d === 3) && (e=== 2) && (f === 2) && (g === 9) && (h === 3) && (i === 6) && (j === 1) && (k === 1) && (l === 6) && (m === 3) && (n === 6) && (o === 1) && (p === 3) && (q=== 3) && (r === 1)){
-  $("#output").text( 'ok');
+  	$("#output").text( 'ok');
   }
   else
   	$("#output").text("no");
@@ -46,21 +40,7 @@ var checkSquare = function() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 var reset = function() {
   $("input").val("");
   $("#output").text("");
 }
-

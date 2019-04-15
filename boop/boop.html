@@ -62,9 +62,7 @@ var scoreText;
     }
     function create ()
     {
-            var music = this.sound.add('pop');
-
-    music.play();
+            
     this.add.image(400, 300, 'sky');
     platforms = this.physics.add.staticGroup();
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
@@ -132,6 +130,9 @@ if (cursors.up.isDown && player.body.touching.down)
     };
     function collectStar(player, star){
     star.disableBody(true, true);
+        var music = this.sound.add('pop');
+
+    music.play();
     score+=10;
     scoreText.setText('Score: ' + score);
     if(stars.countActive(true) === 0){

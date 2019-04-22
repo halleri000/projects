@@ -80,13 +80,29 @@
 
         // static group adds the physics to everything labeled as 'platforms'.
 
-        platforms = this.physics.add.staticGroup();
+    platforms = this.physics.add.staticGroup();
+    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+    
+    platforms.create(50, 250, 'ground');
+    movingPlatform1 = this.physics.add.image(750, 120, 'ground');
+    movingPlatform = this.physics.add.image(400, 400, 'ground');
 
-        platforms.create(400,568,"ground").setScale(2).refreshBody();
+    movingPlatform.setImmovable(true);
+    movingPlatform.body.allowGravity = false;
+    movingPlatform.setCollideWorldBounds(true);
+    movingPlatform.setVelocityX(Phaser.Math.FloatBetween(300, 600));
+    movingPlatform.setBounce(Phaser.Math.FloatBetween(0.4, 1));
+    
+    
 
-        platforms.create(600,400,'ground');
-        platforms.create(50,250, 'ground');
-        platforms.create(750,220,'ground');
+        
+    movingPlatform1.setImmovable(true);
+    movingPlatform1.body.allowGravity = false;
+    movingPlatform1.setCollideWorldBounds(true);
+        movingPlatform1.setVelocityX(Phaser.Math.FloatBetween(300, 600));
+        
+
+    movingPlatform1.setBounce(Phaser.Math.FloatBetween(0.4, 1));
         // alert("RENDERING IS DONE")
 
 
@@ -123,8 +139,19 @@
 
             stars.create(12 + i*50, 50, 'star')
             stars.getChildren()[i].setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+            child.setCollideWorldBounds(true);
+
 
         } 
+        
+        });
+    this.physics.add.collider(stars, movingPlatform);
+    this.physics.add.collider(stars, movingPlatform1);
+        this.physics.add.collider(player, movingPlatform1);
+            this.physics.add.collider(player, movingPlatform);
+    this.physics.add.collider(bombs, movingPlatform1);
+
+    this.physics.add.collider(bombs, movingPlatform);
 
         this.physics.add.collider(bombs, platforms);
         this.physics.add.collider(stars,platforms);

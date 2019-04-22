@@ -76,8 +76,8 @@ var scoreText;
     movingPlatform.setImmovable(true);
     movingPlatform.body.allowGravity = false;
     movingPlatform.setCollideWorldBounds(true);
-    movingPlatform.setVelocityX(Phaser.Math.FloatBetween(300, 600));
-    movingPlatform.setBounce(Phaser.Math.FloatBetween(0.4, 1));
+    movingPlatform.setVelocityX(500);
+    movingPlatform.setBounce(1));
     
     
 
@@ -85,10 +85,10 @@ var scoreText;
     movingPlatform1.setImmovable(true);
     movingPlatform1.body.allowGravity = false;
     movingPlatform1.setCollideWorldBounds(true);
-        movingPlatform1.setVelocityX(Phaser.Math.FloatBetween(300, 600));
+        movingPlatform1.setVelocityX(-500);
         
 
-    movingPlatform1.setBounce(Phaser.Math.FloatBetween(0.4, 1));
+    movingPlatform1.setBounce(1));
     player = this.physics.add.sprite(100, 450, 'dude');
     player.setGravity(300)
 stars = this.physics.add.group({

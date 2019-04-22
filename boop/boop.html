@@ -3,10 +3,15 @@
 <head> 
     <meta charset="UTF-8" />
     <title>Making your first Phaser 3 Game - Part 1</title>
+        
     <script src="//cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
     <style type="text/css">
         body {
             margin: 0;
+            background-color:silver;
+        }
+        body{
+            text-align: center;
         }
     </style>
 </head>
@@ -14,72 +19,53 @@
 
 <script type="text/javascript">
 
+
     var config = {
-        type: Phaser.AUTO,
-        scale:{
-            mode: Phaser.Scale.FIT,
-            autoCenter: Phaser.Scale.CENTER_BOTH,
-            width: 800,
-            height:600,
-        },
-        physics:{
-            default: 'arcade',
-            arcade: {
-                gravity:{ y: 300},
-                debug: false
-            }
-
-        },
-        scene: {
-            preload: init,
-            create: rendering,
-            update: update
-        },
-        audio: {
-            disableWebAudio: true
+    
+    
+       type: Phaser.AUTO,
+     scale: {
+        parent: 'phaser-example',
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 600
+     },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
         }
-    };
-
-    var game = new Phaser.Game(config);
-    var score = 0;
-    var scoreText;
-
-    function init ()
-    {
-        
-        this.load.image("sky", "assets/sky.png")
-        this.load.image("ground", "assets/platform.png")
-        this.load.image('star', 'assets/star.png')
-        this.load.image('bomb', 'assets/bomb.png')
-
-        this.load.spritesheet('dude', 'assets/dude.png', {frameWidth: 32, frameHeight: 48});
-        this.load.audio("pop", "assets/pop.wav");
-        this.load.audio("background", "assets/caketown.mp3");
-        this.load.image('boomboom', "assets/explosion.png");
-        // alert("PRE LOAD IS DONE");
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
     }
-
-    function rendering ()
+    
+    
+    };
+    var game = new Phaser.Game(config);
+    var particles;
+    var score = 0;
+    var end;
+var scoreText;
+    function preload ()
     {
-        var music = this.sound.add("background");
-        music.play();
-        this.add.image(400,300, 'sky');
-        /*setOragin allows for only 4 options:
-            (0,0) - top left
-            (0,1) - bottom left
-            (1,0) - top right
-            (1,1) - bottom right
-        .setScale allows to modify the size of an image:
-            < 1 - scales smaller
-            > 1 - scales larger
-            < 0 - inverts/flips the image and then scales
-            
-            (MORE EXAMPLES of this can be found under TRANSFORM)
-        */
-        
-
-        // static group adds the physics to everything labeled as 'platforms'.
-
+       this.load.image('sky', 'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/sky.png');
+    this.load.image('ground', 'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/platform.png');
+    this.load.image('star', 'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/star.png');
+    this.load.image('bomb', 'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/bomb.png');
+    this.load.spritesheet('dude', 
+       'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/dude.png',
+        { frameWidth: 32, frameHeight: 48 }
+    );
+    this.load.image('boomboom', 'https://raw.githubusercontent.com/halleric/projects/master/boop/explosion2.png')
+    }
+    function create ()
+    {
+    this.add.image(400, 300, 'sky');
     platforms = this.physics.add.staticGroup();
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
     
@@ -103,48 +89,42 @@
         
 
     movingPlatform1.setBounce(Phaser.Math.FloatBetween(0.4, 1));
-        // alert("RENDERING IS DONE")
+    player = this.physics.add.sprite(100, 450, 'dude');
+    player.setGravity(300)
+stars = this.physics.add.group({
+    key: 'star',
+    repeat: 11,
+    setXY: { x: 12, y: 0, stepX: 70 }
+});
+stars.children.iterate(function (child) {
+    child.setBounceY(Phaser.Math.FloatBetween(0.4, 1));
+    child.setVelocityY(Phaser.Math.FloatBetween(200, 500));
+    child.setCollideWorldBounds(true);
 
+});
+bombs = this.physics.add.group();
+player.setBounce(0.2);
+player.setCollideWorldBounds(true);
+scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-        player = this.physics.add.sprite(100,450, 'dude')
-        player.setCollideWorldBounds(true);
-        player.setBounce(0.2);
-        player.setGravity(500);
-        
-        scoreText = this.add.text(16,550,'Score: 0', {fontSize: "32px", fill: "#000"});
-        this.anims.create({
+this.anims.create({
+    key: 'left',
+    frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+    frameRate: 10,
+    repeat: -1
+});
+this.anims.create({
+    key: 'turn',
+    frames: [ { key: 'dude', frame: 4 } ],
+    frameRate: 20
+});
 
-            key:'left',
-            frames: this.anims.generateFrameNumbers('dude', {start: 0, end: 3}),
-            frameRate: 10,
-            repeat: -1
-        })
-        this.anims.create({
-            key:"forward",
-            frames: [{key:'dude', frame: 4}],
-            frameRate: 10
-        });
-        this.anims.create({
-            key:"right",
-            frames: this.anims.generateFrameNumbers('dude', {start: 5, end:8}),
-            frameRate: 10,
-            repeat: 1
-        })
-
-        stars = this.physics.add.group();
-        bombs = this.physics.add.group();
-        this.sound.add("Caketown1.mp3");
-
-        for(let i = 0; i < 16; i++){
-
-            stars.create(12 + i*50, 50, 'star')
-            stars.getChildren()[i].setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-            child.setCollideWorldBounds(true);
-
-
-        } 
-        
-        });
+this.anims.create({
+    key: 'right',
+    frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+    frameRate: 10,
+    repeat: -1
+});
     this.physics.add.collider(stars, movingPlatform);
     this.physics.add.collider(stars, movingPlatform1);
         this.physics.add.collider(player, movingPlatform1);
@@ -153,69 +133,94 @@
 
     this.physics.add.collider(bombs, movingPlatform);
 
-        this.physics.add.collider(bombs, platforms);
-        this.physics.add.collider(stars,platforms);
-        this.physics.add.collider(player,platforms);
-
-        // this.physics.add.overlap(object1, object2, callback function, processCallback(true or false), Context of the callback(meaning which obj is doing the callback func))
-
-        this.physics.add.overlap(player, stars, collectStar, null, this);
-        this.physics.add.overlap(player, bombs, hitBomb, null, this);
-
-        function collectStar(player, star){
-
-            this.sound.add("pop").play();
-            star.disableBody(true,true);
-            score += 100;
-            scoreText.setText("Score: " + score);
-            
-            if(stars.countActive(true)===0){
-                stars.children.iterate(function(child){
-                    child.enableBody(true, child.x, 0, true, true);
-                })
-                var bomb = bombs.create(16,16, "bomb");
-                bomb.setBounce(1);
-                bomb.setCollideWorldBounds(true);
-                bomb.setVelocity(Phaser.Math.Between(-200,200),20);
-            }
-        }
-
-        function hitBomb(player, bomb){
-            this.physics.pause();
-            player.setTint(0xFF00FF);
-            player.anims.play("turn");
 
 
-player.disableBody(true,true),
-bomb.disableBody(true,true)
-
-        }
-
-        cursors = this.input.keyboard.createCursorKeys();
-    } 
-
+    this.physics.add.collider(stars, platforms);
+    this.physics.add.collider(bombs, platforms);
+    this.physics.add.collider(player, platforms);
+    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
+cursors = this.input.keyboard.createCursorKeys();
+    }
     function update ()
     {
-        
-        if(cursors.left.isDown){
-            player.setVelocityX(-160);
-            player.anims.play('left', true);
-        }else if(cursors.right.isDown){
-            player.setVelocityX(160);
-            player.anims.play('right',true);
-        }else{
-            player.setVelocityX(0);
-            player.anims.play('forward');
-        }
-        
-        if(cursors.up.isDown && player.body.touching.down){
-            player.setVelocityY(-600);
-        }
-
-        
-
+    if (cursors.left.isDown)
+{
+    player.setVelocityX(-160);
+    player.anims.play('left', true);
+}
+else if (cursors.right.isDown)
+{
+    player.setVelocityX(160);
+    player.anims.play('right', true);
+}
+else
+{
+    player.setVelocityX(0);
+    player.anims.play('turn');
+}
+if (cursors.up.isDown && player.body.touching.down)
+{
+    player.setVelocityY(-500);
+}else if (cursors.down.isDown){
+		player.setVelocityY(550);
+}
+    };
+    function collectStar(player, star){
+    star.disableBody(true, true);
+    score+=10;
+    scoreText.setText('Score: ' + score); 
+    if(stars.countActive(true) === 0){
+        stars.children.iterate(function (child){
+            child.enableBody(true, child.x, 0, true, true);
+        });
+        var x = (player.x < 400) ? Phaser.Math.Between(400, 800): Phaser.Math.Between(0,400);
+        var bomb = bombs.create(x, 16, 'bomb');
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-500, 500), 50);
+        bomb.allowGravity = false;
     }
+}
+function hitBomb (player, bomb)
+{
+    this.physics.pause(); 
+    player.setTint(0xff0000);
+    player.anims.play('turn');  
+    gameOver = true;
+   
+        particles = this.add.particles('boomboom');
+
+    particles.createEmitter({
+        alpha: { start: 1, end: 0 },
+        scale: { start: .05,end:.05},
+        tint: { start: 0xff945e, end: 0xff945e },
+        speed: 50,
+        accelerationY: -50,
+        angle: { min: -85, max: -95 },
+        rotate: { min: -180, max: 180 },
+        lifespan: { min: 1000, max: 1100 },
+       // blendMode: 'ADD',
+        maxParticles: 5,
+        x: player.x,
+        y: player.y 
+       
+    });
+  
     
+    
+    player.disableBody(true,true),
+    bomb.disableBody(true,true)
+    
+    
+
+ 
+};
+
+
+
+
+
 </script>
 
 </body>

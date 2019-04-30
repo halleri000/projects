@@ -31,6 +31,7 @@ function init(){
     this.load.image('sky', 'assets/sky.png')
     this.load.image('1background', 'assets/BGTile (1).png')
     this.load.image('2background', 'assets/BGTile (2).png')
+    this.load.image('3background', 'assets/BGTile (3).png')
 }
 
 function rendering(){
@@ -38,13 +39,16 @@ function rendering(){
 
     oneBG = this.physics.add.group();
     twoBG = this.physics.add.group();
+    threeBG = this.physics.add.group();
     for(let i = 0; i<5;i++){
         oneBG.create(30 + i*175,45, '1background').setScale(.35)
     }
     for(let i = 0; i<5;i++){
         twoBG.create(118 + i*175,45, '2background').setScale(.35)
     }
-    //this.add.image(30,30, 'background').setScale(.25)
+    for(let i = 0; i<10;i++){
+        threeBG.create(40 + i*87,130, '3background').setScale(.35)
+    }
     
 
 

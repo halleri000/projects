@@ -6,7 +6,7 @@ var config = {
         width: 800,
         height: 600
     },
-    
+
     physics: {
         default: 'arcade',
         arcade: {
@@ -27,34 +27,33 @@ var game = new Phaser.Game(config);
 
 
 
-function init(){
+function init() {
     this.load.image('sky', 'assets/sky.png')
     this.load.image('1background', 'assets/BGTile (1).png')
     this.load.image('2background', 'assets/BGTile (2).png')
     this.load.image('3background', 'assets/BGTile (3).png')
+    this.load.image('4background', 'assets/BGTile (4).png')
+    this.load.image('1tile','assets/Tile (1).png')
+    this.load.spritesheet('dude', 'assets/idle.png',{frameWidth: 250, frameHeight: 430});
+
 }
 
-function rendering(){
-    this.add.image(400, 300, 'sky');
+function rendering() {
 
     oneBG = this.physics.add.group();
     twoBG = this.physics.add.group();
     threeBG = this.physics.add.group();
-    for(let i = 0; i<5;i++){
-        oneBG.create(30 + i*175,45, '1background').setScale(.35)
-    }
-    for(let i = 0; i<5;i++){
-        twoBG.create(118 + i*175,45, '2background').setScale(.35)
-    }
-    for(let i = 0; i<10;i++){
-        threeBG.create(40 + i*87,130, '3background').setScale(.35)
-    }
-    
-
-
+    fourBG = this.physics.add.group();
   
+
+    this.add.image(40,600,'1tile').setScale(.35);
+    this.add.sprite(40,30, 'dude').setScale(.20)
+
+
+
+
 }
 
-function update(){
+function update() {
 
 }

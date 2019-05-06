@@ -3,8 +3,8 @@ var config = {
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 800,
-        height: 600
+        width: 1000,
+        height: 800
     },
 
     physics: {
@@ -36,14 +36,18 @@ function init() {
 }
 
 function rendering() {
+
+    this.cameras.main.setBounds(0, 0, 1920 * 2, 1080 * 2);
+    this.physics.world.setBounds(0, 0, 1920 * 2, 1080 * 2);
+
     onetile = this.physics.add.group();
     twoBG = this.physics.add.group();
     threeBG = this.physics.add.group();
     fourBG = this.physics.add.group();
 
-    this.add.image(400, 300, 'sky').setScale(1.5)
+    this.add.image(400, 300, 'sky').setScale(8)
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 50; i++) {
         onetile.create(10 + i * 85, 600, 'block').setScale(.35).setImmovable(true);
     }
 
@@ -76,6 +80,8 @@ function rendering() {
         frameRate: 10,
         repeat: -1
     });
+
+    this.cameras.main.startFollow(player, true, 0.05, 0.05);
 
     cursors = this.input.keyboard.createCursorKeys();
 }

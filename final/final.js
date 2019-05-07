@@ -32,12 +32,12 @@ function init() {
     this.load.image('1tile', 'assets/Tile (1).png')
     this.load.spritesheet('dude',//'assets/run.png', 
     'https://raw.githubusercontent.com/jlaw21/jelaw21.github.io/master/Tuts/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
-    this.load.image('block', 'assets/Tile (5).png')
+    this.load.image('block', 'assets/Tile (15).png')
 }
 
 function rendering() {
 
-    this.cameras.main.setBounds(0, 0, 1920 * 2, 1080 * 2);
+    this.cameras.main.setBounds(0, 100, 1920 * 2, 1080 * 2);
     this.physics.world.setBounds(0, 0, 1920 * 2, 1080 * 2);
 
     onetile = this.physics.add.group();
@@ -48,14 +48,14 @@ function rendering() {
     this.add.image(400, 300, 'sky').setScale(8)
 
     for (let i = 0; i < 50; i++) {
-        onetile.create(10 + i * 85, 600, 'block').setScale(.35).setImmovable(true);
+        onetile.create(10 + i * 85, 800, 'block').setScale(.35).setImmovable(true);
     }
 
-    onetile.create(605, 510, 'block').setScale(.35).setImmovable(true);
-    onetile.create(690, 510, 'block').setScale(.35).setImmovable(true);
-    onetile.create(690, 425, 'block').setScale(.35).setImmovable(true);
+    onetile.create(605, 710, 'block').setScale(.35).setImmovable(true);
+    onetile.create(690, 710, 'block').setScale(.35).setImmovable(true);
+    onetile.create(690, 625, 'block').setScale(.35).setImmovable(true);
 
-    player = this.physics.add.sprite(40, 30, 'dude')//.setScale(.20)
+    player = this.physics.add.sprite(40, 710, 'dude')//.setScale(.20)
     player.setGravityY(300);
     player.setCollideWorldBounds(true);
 

@@ -28,6 +28,7 @@ var game = new Phaser.Game(config);
 
 
 function init() {
+    this.load.imade('oog','assets/Tile (5).png')
     this.load.image('sky', 'assets/sky.png')
     this.load.image('1tile', 'assets/Tile (1).png')
     this.load.spritesheet('dude',//'assets/run.png', 

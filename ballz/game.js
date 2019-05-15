@@ -1,3 +1,28 @@
+
+var config = {
+    type: Phaser.AUTO,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 1000,
+        height: 800
+    },
+
+    physics: {
+        default: 'arcade',
+        arcade: {
+            //gravity: { y: 300 },
+            debug: false
+        }
+    },
+
+    scene: {
+        preload: init,
+        create: rendering,
+        update: update
+    }
+
+};
 var game;
 var gameOptions = {
     scorePanelHeight: 0.08,

@@ -1,5 +1,4 @@
-
-
+  
 var game;
 var gameOptions = {
     scorePanelHeight: 0.08,
@@ -17,10 +16,10 @@ window.onload = function() {
 var playGame = function(){}
 playGame.prototype = {
 	preload: function(){
-        game.load.image("ball", "assets/ball.png");
-        game.load.image("panel", "asset/panel.png");
-        game.load.image("trajectory", "assets/trajectory.png");
-        game.load.image("block", "assets/block.png");
+        game.load.image("ball", "ball.png");
+        game.load.image("panel", "panel.png");
+        game.load.image("trajectory", "trajectory.png");
+        game.load.image("block", "block.png");
 	},
     create: function(){
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;

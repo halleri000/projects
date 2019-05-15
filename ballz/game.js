@@ -1,4 +1,3 @@
-
 var game;
 var gameOptions = {
     scorePanelHeight: 0.08,

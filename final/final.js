@@ -32,7 +32,6 @@
 
      
      };
-     var bullets;
 
      var game = new Phaser.Game(config);
 
@@ -41,12 +40,20 @@
     this.load.image('pship', 'assets/sprPlayer.png')
     this.load.image('shield', 'assets/sprShieldTile.png')
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', {frameWidth:8,frameHeight:8, })
+    this.load.image('boop','assets/thing.gif')
     
 }
 
  function rendering(){
-    player = this.physics.add.image(400,500,'pship').setScale(3);
- 
+        player = this.physics.add.image(400,500,'pship').setScale(3);
+        //player.setCollideWorldBounds(true);
+
+        bop=this.add.sprite(100,100,'enemy1');
+        //enemy.setCollideWorldBounds(true);
+        bop=this.physics.add.group()
+
+       
+
         
 
  
@@ -59,6 +66,8 @@
 
  function update(){
 
+            bop.setVelocityX(160);
+        
     if(cursors.left.isDown){
         player.setVelocityX(-160);
         //player.anims.play('left', true);
@@ -68,6 +77,10 @@
     }else{
         player.setVelocityX(0);
         //player.anims.play('forward');
+    }
+    if(cursors.up.isDown){
+        bop.create(player.x, player.y, 'boop').setScale(.019)
+        bop.setVelocityY(-100)
     }
 
  }

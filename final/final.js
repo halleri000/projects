@@ -45,12 +45,25 @@
 }
 
  function rendering(){
-        player = this.physics.add.image(400,500,'pship').setScale(3);
+     player = this.physics.add.image(400,500,'pship').setScale(3);
         //player.setCollideWorldBounds(true);
 
-        bop=this.add.sprite(100,100,'enemy1');
-        //enemy.setCollideWorldBounds(true);
-        bop=this.physics.add.group()
+        bop=this.physics.add.group();
+        
+        for(let i=2; i<10;i++){
+        for(let x=1; x<4; x++){
+          bop.create(i*75,x*75,'enemy1').setScale(4);
+        }
+      
+        }
+
+       // bop=this.physics.add.sprite(100,100,'enemy1').setScale(5);
+
+
+
+
+
+
 
        
 
@@ -66,7 +79,12 @@
 
  function update(){
 
-            bop.setVelocityX(160);
+
+bop.setVelocityX(160);
+    if (bop.x > 950)
+    {
+        bop.x = -150;
+    }
         
     if(cursors.left.isDown){
         player.setVelocityX(-160);
@@ -78,9 +96,6 @@
         player.setVelocityX(0);
         //player.anims.play('forward');
     }
-    if(cursors.up.isDown){
-        bop.create(player.x, player.y, 'boop').setScale(.019)
-        bop.setVelocityY(-100)
-    }
+
 
  }

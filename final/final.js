@@ -34,6 +34,7 @@
     this.load.image('shield', 'assets/sprShieldTile.png')
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', {frameWidth:8,frameHeight:8, })
     this.load.image('boop','assets/thing.gif')
+	 this.load.image('boomboom', 'assets/explosion2.png')
     
 }
 

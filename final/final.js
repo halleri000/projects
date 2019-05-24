@@ -21,9 +21,13 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
+var timer = 0;
+var timerText;
 var score = 0;
 var scoreText;
 var lastFired = 0;
+var g = 0;
+
 
 function init() {
     this.load.image('ship', 'assets/sprPlayer.png')
@@ -34,9 +38,13 @@ function init() {
 
 function rendering() {
     player = this.physics.add.image(400, 500, 'ship').setScale(3);
-    player.setCollideWorldBounds(true);
+    //player.setCollideWorldBounds(true);
 
-    scoreText = this.add.text(16, 550, 'Score: 0', {
+    scoreText = this.add.text(16, 560, 'Score: 0', {
+        fontSize: "32px",
+        fill: 'white'
+    });
+    timerText = this.add.text(550, 550, 'Time: 0', {
         fontSize: "32px",
         fill: 'white'
     });
@@ -44,26 +52,31 @@ function rendering() {
     this.anims.create({
         key:'enemy',
         frames:this.anims.generateFrameNumbers('enemy1', {start: 0, end:2}),
-        frameRate:10,
+        frameRate:5,
         repeat:-1
     })
 
     enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 200), 'enemy1').setScale(4);
 
     timedEvent = this.time.addEvent({
-        delay: 3000,
-        callback: onEvent,
+        delay: 1000,
+        callback: onEvent, 
         callbackScope: this,
         loop: true
     });
 
     function onEvent() {
+        timer++;
+        timerText.setText('Time:' + timer);
         enemy = this.physics.add.group();
         enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 600), 'enemy1').setScale(4);
         this.physics.moveToObject(enemy, player, Phaser.Math.Between(40, 200));
 
         this.physics.add.collider(enemy, player, hitPlayer, null, this);
         this.physics.add.collider(enemy, bullets, hitEnemy, null, this);
+        if(g === 1){
+            timedEvent.remove(false)
+        }
     }
 
     bullets = this.physics.add.group({
@@ -80,6 +93,8 @@ function rendering() {
 
     function hitEnemy(enemy, bullets) {
 
+        score += 10;
+        scoreText.setText("Score: " + score);
         enemy.disableBody(true, true);
         bullets.disableBody(true, true);
 
@@ -100,6 +115,8 @@ function rendering() {
     }
 
     function hitPlayer(player, enemy) {
+        timerText.setText("Time: 0")
+        scoreText.setText("Score: " + score);
         this.physics.pause();
         player.disableBody(true, true);
         enemy.disableBody(true, true);
@@ -119,6 +136,7 @@ function rendering() {
             y: player.y,
 
         });
+        g++;
     }
     cursors = this.input.keyboard.createCursorKeys();
 }
@@ -126,6 +144,8 @@ function rendering() {
 function update(time) {
 
     enemy.anims.play('enemy');
+
+    this.physics.world.wrap(player,48)
 
     if (cursors.left.isDown) {
         player.setVelocityX(-220);
@@ -138,9 +158,21 @@ function update(time) {
     } else {
         player.setVelocity(0);
     }
-    if (cursors.space.isDown && time > lastFired) {
+    if (cursors.up.isDown && cursors.space.isDown && time > lastFired) {
         bullets.create(player.x, player.y, 'bullets').setScale(.019);
         bullets.setVelocityY(-160)
+        lastFired = time + 50;
+    }else if(cursors.right.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(160)
+        lastFired = time + 50;
+    }else if(cursors.left.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(-160)
+        lastFired = time + 50;
+    }else if(cursors.down.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(-160)
         lastFired = time + 50;
     }
 }

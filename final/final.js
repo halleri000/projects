@@ -34,7 +34,9 @@ function init() {
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', { frameWidth: 8, frameHeight: 8, })
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
+    this.load.image('coin', 'assets/coin.png')
 }
+
 
 
 function rendering() {
@@ -169,9 +171,22 @@ function update(time) {
     } else {
         player.setVelocity(0);
     }
-    if (cursors.space.isDown && time > lastFired) {
+    if (cursors.up.isDown && cursors.space.isDown && time > lastFired) {
         bullets.create(player.x, player.y, 'bullets').setScale(.019);
         bullets.setVelocityY(-160)
         lastFired = time + 50;
+    }else if(cursors.right.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(160)
+        lastFired = time + 50;
+    }else if(cursors.left.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(-160)
+        lastFired = time + 50;
+    }else if(cursors.down.isDown && cursors.space.isDown && time > lastFired){
+        bullets.create(player.x, player.y, 'bullets').setScale(.019);
+        bullets.setVelocityX(-160)
+        lastFired = time + 50;
     }
 }
+

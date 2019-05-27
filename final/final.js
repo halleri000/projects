@@ -30,11 +30,11 @@ var g = 0;
 
 
 function init() {
-    this.load.image('ship', 'assets/sprPlayer.png')
+    this.load.image('ship', 'assets/sprPlayer-1.png.png')
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', { frameWidth: 8, frameHeight: 8, })
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
-    this.load.image('coin', 'assets/coin.png')
+    this.load.image('coin', 'assets/coin 2.png')
 }
 
 

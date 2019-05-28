@@ -42,7 +42,6 @@ function init() {
 
 function rendering() {
     player = this.physics.add.image(400, 500, 'ship').setScale(3);
-    //player.setCollideWorldBounds(true);
     scoreText = this.add.text(16, 560, 'Score: 0', {
         fontSize: "32px",
         fill: 'white'
@@ -94,7 +93,6 @@ function rendering() {
     }
 
     bullets = this.physics.add.group({
-        //maxSize:10,
         runChildrenUpdate: true
     });
 
@@ -128,7 +126,6 @@ function rendering() {
             angle: { min: -85, max: -95},
             rotate: { min: -180, max: 180},
             lifespan: { min: 1000, max: 1100},
-            // blendMode: 'ADD',
             maxParticles: 5,
             x: enemy.x,
             y: enemy.y,
@@ -151,7 +148,6 @@ function rendering() {
             angle: { min: -85, max: -95},
             rotate: { min: -180, max: 180},
             lifespan: { min: 1000, max: 1100},
-            // blendMode: 'ADD',
             maxParticles: 5,
             x: player.x,
             y: player.y,

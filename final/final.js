@@ -6,6 +6,7 @@ var config = {
         width: 800,
         height: 600
     },
+
     physics: {
         default: 'arcade',
         arcade: {
@@ -13,6 +14,7 @@ var config = {
             debug: false
         }
     },
+
     scene: {
         preload: init,
         create: rendering,
@@ -28,21 +30,19 @@ var scoreText;
 var lastFired = 0;
 var g = 0;
 
-
 function init() {
     this.load.image('ship', 'assets/sprPlayer-1.png.png')
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', { frameWidth: 8, frameHeight: 8, })
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
     this.load.image('coin', 'assets/coin 2.png')
+   // this.load.spritesheet('explosion', 'assets/Explosion.png', {frameWidth: 64,
+   // frameHeight:8})
 }
-
-
 
 function rendering() {
     player = this.physics.add.image(400, 500, 'ship').setScale(3);
     //player.setCollideWorldBounds(true);
-
     scoreText = this.add.text(16, 560, 'Score: 0', {
         fontSize: "32px",
         fill: 'white'
@@ -52,6 +52,12 @@ function rendering() {
         fill: 'white'
     });
 
+    /*this.anims.create({
+        key:'explosion',
+        frames:this.anims.generateFrameNumbers('explosion',{start:0, end:4}),
+        frameRate:5,
+        repeat:-1
+    }),*/
     this.anims.create({
         key:'enemy',
         frames:this.anims.generateFrameNumbers('enemy1', {start: 0, end:2}),
@@ -62,23 +68,24 @@ function rendering() {
     enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 200), 'enemy1').setScale(4);
 
     timedEvent = this.time.addEvent({
-        delay: 3000,
+        delay: 1000,
         callback: onEvent, 
         callbackScope: this,
         loop: true
     });
 
-
     function onEvent() {
         timer++;
         timerText.setText('Time:' + timer);
         enemy = this.physics.add.group();
-        enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 600), 'enemy1').setScale(4);
+        enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), 100, 'enemy1').setScale(4);
         this.physics.moveToObject(enemy, player, Phaser.Math.Between(40, 200));
         coins = this.physics.add.group();
-        coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(160);
+        coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(Phaser.Math.Between(-200,200));
+        coins.setCollideWorldBounds(true);
+        coins.setBounce(10)
        
-				this.physics.add.overlap(player, coins, collectCoin, null, this);
+		this.physics.add.overlap(player, coins, collectCoin, null, this);
         this.physics.add.collider(enemy, player, hitPlayer, null, this);
         this.physics.add.collider(enemy, bullets, hitEnemy, null, this);
         if(g === 1){
@@ -98,18 +105,19 @@ function rendering() {
 
     particles = this.add.particles('boomboom');
     
-     function collectCoin(player, coins){
-    coins.disableBody(true, true);
-    score+=10;
-    scoreText.setText('Score: ' + score); 
+    function collectCoin(player, coins){
+        coins.disableBody(true, true);
+        score+=150;
+        scoreText.setText('Score: ' + score); 
     }
 
     function hitEnemy(enemy, bullets) {
-
-        score += 10;
+        score += 100;
         scoreText.setText("Score: " + score);
         enemy.disableBody(true, true);
         bullets.disableBody(true, true);
+        //explosion = this.physics.add.sprite(enemy.x, enemy.y, 'explosion').setScale(4)
+       // enemy.anims.play('explosion')
 
         particles.createEmitter({
             alpha: { start: 1, end: 0},
@@ -171,22 +179,10 @@ function update(time) {
     } else {
         player.setVelocity(0);
     }
-    if (cursors.up.isDown && cursors.space.isDown && time > lastFired) {
-        bullets.create(player.x, player.y, 'bullets').setScale(.019);
-        bullets.setVelocityY(-160)
-        lastFired = time + 50;
-    }else if(cursors.right.isDown && cursors.space.isDown && time > lastFired){
-        bullets.create(player.x, player.y, 'bullets').setScale(.019);
-        bullets.setVelocityX(160)
-        lastFired = time + 50;
-    }else if(cursors.left.isDown && cursors.space.isDown && time > lastFired){
-        bullets.create(player.x, player.y, 'bullets').setScale(.019);
-        bullets.setVelocityX(-160)
-        lastFired = time + 50;
-    }else if(cursors.down.isDown && cursors.space.isDown && time > lastFired){
-        bullets.create(player.x, player.y, 'bullets').setScale(.019);
-        bullets.setVelocityX(-160)
-        lastFired = time + 50;
+    if (cursors.space.isDown && time > lastFired) {
+        bullets.create(player.x, player.y, 'bullets').setScale(.030);
+        bullets.setVelocityY(-260)
+        lastFired = time + 500;
     }
 }
 

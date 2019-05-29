@@ -36,7 +36,7 @@ function init() {
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
     //this.load.image('coin', 'assets/coin 2.png')
-   this.load.spritesheet('coin', 'assets/coin 2.png', {frameWidth: 16,
+   this.load.spritesheet('coin', 'assets/Full Coins.png', {frameWidth: 16,
     frameHeight:16})
 }
 

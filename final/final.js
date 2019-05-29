@@ -35,8 +35,8 @@ function init() {
     this.load.spritesheet('enemy1', 'assets/sprEnemy0.png', { frameWidth: 8, frameHeight: 8, })
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
-    this.load.image('coin', 'assets/coin 2.png')
-   this.load.spritesheet('explosion', 'assets/coin 2.png', {frameWidth: 16,
+    //this.load.image('coin', 'assets/coin 2.png')
+   this.load.spritesheet('coin', 'assets/coin 2.png', {frameWidth: 16,
     frameHeight:16})
 }
 
@@ -79,10 +79,10 @@ function rendering() {
         enemy = this.physics.add.group();
         enemy = this.physics.add.sprite(Phaser.Math.Between(100, 800), 100, 'enemy1').setScale(4);
         this.physics.moveToObject(enemy, player, Phaser.Math.Between(40, 200));
-        coins = this.physics.add.group();
-        coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(Phaser.Math.Between(-200,200));
-        coins.setCollideWorldBounds(true);
-        coins.setBounce(10)
+       // coins = this.physics.add.group();
+       // coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(Phaser.Math.Between(-200,200));
+       // coins.setCollideWorldBounds(true);
+        //coins.setBounce(10)
 	    
 	    coins = this.physics.add.group();
        //coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(160);

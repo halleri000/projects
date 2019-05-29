@@ -36,8 +36,8 @@ function init() {
     this.load.image('bullets', 'assets/beep.png')
     this.load.image('boomboom', 'assets/explosion2.png')
     this.load.image('coin', 'assets/coin 2.png')
-   // this.load.spritesheet('explosion', 'assets/Explosion.png', {frameWidth: 64,
-   // frameHeight:8})
+   this.load.spritesheet('explosion', 'assets/coin 2.png', {frameWidth: 16,
+    frameHeight:16})
 }
 
 function rendering() {
@@ -51,12 +51,12 @@ function rendering() {
         fill: 'white'
     });
 
-    /*this.anims.create({
-        key:'explosion',
-        frames:this.anims.generateFrameNumbers('explosion',{start:0, end:4}),
+    this.anims.create({
+        key:'coin',
+        frames:this.anims.generateFrameNumbers('explosion',{start:0, end:7}),
         frameRate:5,
         repeat:-1
-    }),*/
+    }),
     this.anims.create({
         key:'enemy',
         frames:this.anims.generateFrameNumbers('enemy1', {start: 0, end:2}),
@@ -83,6 +83,11 @@ function rendering() {
         coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(Phaser.Math.Between(-200,200));
         coins.setCollideWorldBounds(true);
         coins.setBounce(10)
+	    
+	    coins = this.physics.add.group();
+       //coins = this.physics.add.image(Phaser.Math.Between(100,800),100,'coin').setVelocity(160);
+        coins = this.physics.add.sprite(Phaser.Math.Between(100, 800), 100, 'coin').setVelocity(160).setScale(1.5);
+           coins.anims.play('coin');
        
 		this.physics.add.overlap(player, coins, collectCoin, null, this);
         this.physics.add.collider(enemy, player, hitPlayer, null, this);

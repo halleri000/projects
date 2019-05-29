@@ -53,7 +53,7 @@ function rendering() {
 
     this.anims.create({
         key:'coin',
-        frames:this.anims.generateFrameNumbers('explosion',{start:0, end:7}),
+        frames:this.anims.generateFrameNumbers('coin',{start:0, end:7}),
         frameRate:5,
         repeat:-1
     }),

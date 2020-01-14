@@ -146,10 +146,10 @@ $(document).ready(function () {
 
 var N1 = " There once was an ancient race of warriors named the... "
 var N2 = " The leader was a well known warrior that has killed the biggest of monsters and won every battle he was been in. Before the last battle that would determine that fate of the kingdom he went to... "
-var N3 = " The most well known soldier in the moo moo pals was named. Auhsoj Ecitsuj. He was having a good time at the fair with his family when suddenly a group of tri gender pyro foxes killed his family before he could react. He killed them all knowing who sent them because of the insignia they had. He went to...  "
+var N3 = " The most well known soldier in the moo moo pals was named, Auhsoj Ecitsuj. He was having a good time at the fair with his family when suddenly a group of tri gender pyro foxes killed his family before he could react. He killed them all knowing who sent them because of the insignia they had. He went to...  "
 var N4 = " The battle lasted for days with thousands casualities and no sign of slowing down anytime soon. He decided to... "
 var N5 = " You broke into the enemy's castle. There was high levels of security every where. You went in... "
-var N6 = " you found the main headquarters of the man that hired the assassins. This headquarters was like a fortress with guards everywhere. You..."
+var N6 = " You found the main headquarters of the man that hired the assassins. This headquarters was like a fortress with guards everywhere. You..."
 var N7 = " One you way out of the kingdom some ofthe assassins saw you and cut you off. You were taken to a dungeon and were tortured for what seemed like months. One night you were able to snag the keys to the cell from a guard. You... "
 var N8 = " The rocket caused a nuclear war far destroying almost all life on earth "
 var N9 = " The battle lasted only two more days before the enemy decided to surrender "
